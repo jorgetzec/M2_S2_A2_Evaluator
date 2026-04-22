@@ -184,7 +184,7 @@ with st.sidebar:
         "Escribe tu firma completa (multilinea)",
         value=st.session_state.get("firma_asesor", ""),
         height=100,
-        placeholder="Ejemplo:\nRicardo Raúl Estrada Pérez\nAsesor Virtual\nM2C1G85-021.",
+        placeholder="Ejemplo:\nJorge Eduardo Trejo Zacarías\nAsesor Virtual\nM2C1G85-021.",
         key="firma_asesor_sidebar",
         help="Esta firma aparecerá al final de la retroalimentación generada y en el JSON exportado.",
     )
