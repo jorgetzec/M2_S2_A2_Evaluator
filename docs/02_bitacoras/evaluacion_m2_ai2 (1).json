@@ -1,0 +1,3007 @@
+{
+  "cognitivo": {
+    "relato": "Experto",
+    "clases": "Aprendiz",
+    "audio": "Capacitado",
+    "parrafo": "Experto",
+    "nivel_global": "Capacitado",
+    "score": 90
+  },
+  "actitudinal": {
+    "level": "Capacitado",
+    "score": 90,
+    "cumplidos": 11,
+    "total": 12,
+    "indicadores": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "comunicativo": {
+    "level": "Requiere Apoyo",
+    "score": 60,
+    "errores_ortografia": 16
+  },
+  "pensamiento_critico": {
+    "level": "Aceptable",
+    "score": 80
+  },
+  "originalidad": {
+    "deduccion": 0,
+    "nivel": "Excelente"
+  },
+  "total_score": 80,
+  "total_sin_deduccion": 80.0,
+  "highlights_accuracy": 64.3,
+  "audio_found": true,
+  "liga_ok": true,
+  "audio_duration": 202.6178125,
+  "titulo_ok": true,
+  "fuente_ok": true,
+  "filename": "VargasEstrada_SalmaAngelica_M02S1AI2.docx",
+  "student_name": "SalmaAngelica VargasEstrada",
+  "metrics": {
+    "story_length": {
+      "words": 516,
+      "status": "Correcta"
+    },
+    "comparison_length": {
+      "words": 73,
+      "lines_approx": 6
+    },
+    "highlight_stats": {
+      "total": 451,
+      "correct": 290,
+      "accuracy": 64.3
+    },
+    "orthography_errors": 16,
+    "orthography_matches": [
+      {
+        "message": "Si el verbo está en pasado, se escribe con tilde.",
+        "context": "...ene diabetes así que esa enfermedad nos quito varios negocios, por lo que solamente n...",
+        "suggestion": "quitó"
+      },
+      {
+        "message": "Si es del v. ‘tener’, lleva tilde. Puede ser, más raramente, un sustantivo sin tilde.",
+        "context": "...on mi madre en la tienda, en ese tiempo tenia 2-3 años apenas, entonces me la pasaba ...",
+        "suggestion": "tenía"
+      },
+      {
+        "message": "Como locución causal, se escribe con coma.",
+        "context": "...e con mi imaginación. Digo “ligeramente” ya que, si tenía varios amigos, tenía especial...",
+        "suggestion": ", ya que"
+      },
+      {
+        "message": "Si es del v. ‘venir’, lleva tilde. Puede ser un sustantivo sin tilde (ej. ‘con la venia’).",
+        "context": "...rfectamente que él sabía coser, a veces venia a la tienda conmigo y me traía algunos ...",
+        "suggestion": "venía"
+      },
+      {
+        "message": "Si el verbo está en pasado, se escribe con tilde.",
+        "context": "...a un ladrón, se metió y saqueo todo, se llevo demasiada mercancía, mi madre fue con u...",
+        "suggestion": "llevó"
+      },
+      {
+        "message": "Se escribe con tilde si equivale a ‘todavía’. Se escribe sin tilde si significa ‘hasta’ o ‘incluso’.",
+        "context": "...n un policía, la miraba asustada y como aun era una niña pequeña, solamente miraba ...",
+        "suggestion": "aún"
+      },
+      {
+        "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+        "context": "...o tiempo con mi madre si no, que pasaba mas tiempo con mi padre, ya que el se quedo...",
+        "suggestion": "más"
+      },
+      {
+        "message": "El pronombre personal «él» lleva tilde.",
+        "context": "... pasaba mas tiempo con mi padre, ya que el se quedo a mi cuidado y mi madre se iba...",
+        "suggestion": "él"
+      },
+      {
+        "message": "Si el verbo está en pasado, se escribe con tilde.",
+        "context": "...a mas tiempo con mi padre, ya que el se quedo a mi cuidado y mi madre se iba a trabaj...",
+        "suggestion": "quedó"
+      },
+      {
+        "message": "Si es del v. ‘hacer’, se escribe con tilde.",
+        "context": "...que es el mejor padre, pero supongo que hacia lo que podía. No tengo una gran relació...",
+        "suggestion": "hacía"
+      },
+      {
+        "message": "El pronombre personal «él» lleva tilde.",
+        "context": "...e podía. No tengo una gran relación con el para ser sinceros. Aun así, no vivo act...",
+        "suggestion": "él"
+      },
+      {
+        "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+        "context": "...alabras, yo siento sinceramente que soy mas clara al expresarme escrito, pero aun a...",
+        "suggestion": "más"
+      },
+      {
+        "message": "Se ha encontrado un posible error ortográfico.",
+        "context": "...s clara al expresarme escrito, pero aun asi, siento que le meto mas emociones al ex...",
+        "suggestion": "así"
+      },
+      {
+        "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+        "context": "...crito, pero aun asi, siento que le meto mas emociones al expresarme así, otra difer...",
+        "suggestion": "más"
+      },
+      {
+        "message": "Como locución causal, se escribe con coma.",
+        "context": "...ferencia que encuentro es en la duración ya que, resumo más o hablo más rápido la infor...",
+        "suggestion": ", ya que"
+      },
+      {
+        "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+        "context": "... información logrando que el relato sea mas corto.  ",
+        "suggestion": "más"
+      }
+    ]
+  },
+  "orthography_matches": [
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "contexto": "...ene diabetes así que esa enfermedad nos quito varios negocios, por lo que solamente n...",
+      "sugerencia": "quitó"
+    },
+    {
+      "message": "Si es del v. ‘tener’, lleva tilde. Puede ser, más raramente, un sustantivo sin tilde.",
+      "contexto": "...on mi madre en la tienda, en ese tiempo tenia 2-3 años apenas, entonces me la pasaba ...",
+      "sugerencia": "tenía"
+    },
+    {
+      "message": "Como locución causal, se escribe con coma.",
+      "contexto": "...e con mi imaginación. Digo “ligeramente” ya que, si tenía varios amigos, tenía especial...",
+      "sugerencia": ", ya que"
+    },
+    {
+      "message": "Si es del v. ‘venir’, lleva tilde. Puede ser un sustantivo sin tilde (ej. ‘con la venia’).",
+      "contexto": "...rfectamente que él sabía coser, a veces venia a la tienda conmigo y me traía algunos ...",
+      "sugerencia": "venía"
+    },
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "contexto": "...a un ladrón, se metió y saqueo todo, se llevo demasiada mercancía, mi madre fue con u...",
+      "sugerencia": "llevó"
+    },
+    {
+      "message": "Se escribe con tilde si equivale a ‘todavía’. Se escribe sin tilde si significa ‘hasta’ o ‘incluso’.",
+      "contexto": "...n un policía, la miraba asustada y como aun era una niña pequeña, solamente miraba ...",
+      "sugerencia": "aún"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "contexto": "...o tiempo con mi madre si no, que pasaba mas tiempo con mi padre, ya que el se quedo...",
+      "sugerencia": "más"
+    },
+    {
+      "message": "El pronombre personal «él» lleva tilde.",
+      "contexto": "... pasaba mas tiempo con mi padre, ya que el se quedo a mi cuidado y mi madre se iba...",
+      "sugerencia": "él"
+    },
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "contexto": "...a mas tiempo con mi padre, ya que el se quedo a mi cuidado y mi madre se iba a trabaj...",
+      "sugerencia": "quedó"
+    },
+    {
+      "message": "Si es del v. ‘hacer’, se escribe con tilde.",
+      "contexto": "...que es el mejor padre, pero supongo que hacia lo que podía. No tengo una gran relació...",
+      "sugerencia": "hacía"
+    },
+    {
+      "message": "El pronombre personal «él» lleva tilde.",
+      "contexto": "...e podía. No tengo una gran relación con el para ser sinceros. Aun así, no vivo act...",
+      "sugerencia": "él"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "contexto": "...alabras, yo siento sinceramente que soy mas clara al expresarme escrito, pero aun a...",
+      "sugerencia": "más"
+    },
+    {
+      "message": "Se ha encontrado un posible error ortográfico.",
+      "contexto": "...s clara al expresarme escrito, pero aun asi, siento que le meto mas emociones al ex...",
+      "sugerencia": "así"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "contexto": "...crito, pero aun asi, siento que le meto mas emociones al expresarme así, otra difer...",
+      "sugerencia": "más"
+    },
+    {
+      "message": "Como locución causal, se escribe con coma.",
+      "contexto": "...ferencia que encuentro es en la duración ya que, resumo más o hablo más rápido la infor...",
+      "sugerencia": ", ya que"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "contexto": "... información logrando que el relato sea mas corto.  ",
+      "sugerencia": "más"
+    }
+  ],
+  "highlights_detail": [
+    {
+      "word": "Nací",
+      "expected": "VERB",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "26",
+      "expected": "ADV",
+      "detected": "NUM",
+      "match": false
+    },
+    {
+      "word": "de",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "enero",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "del",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "2009",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "en",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "Guanajuato",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "desde",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "pequeña",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "mis",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padres",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "viajaban",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mucho",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tenían",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "gran",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "negocio",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "zapaterías",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "tal",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "vez",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "pensaría",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "tenía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "todo",
+      "expected": "ADV",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "fue",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "nunca",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "fue",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "tiene",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "diabetes",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "esa",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "enfermedad",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "nos",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "quito",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "varios",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "negocios",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "solamente",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "nos",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "quedamos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "una",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "zapatería",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "tienda",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "NOUN",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "ropa",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "encargaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "vender",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "estar",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "atenta",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "en",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "tienda",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "mientras",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "aun",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "su",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "enfermedad",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "encargaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "reabastecer",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "todo",
+      "expected": "ADV",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "por",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "mientras",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "quedaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "en",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "tienda",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "en",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "tenia",
+      "expected": "VERB",
+      "detected": "PROPN",
+      "match": false
+    },
+    {
+      "word": "2",
+      "expected": "ADV",
+      "detected": "NUM",
+      "match": false
+    },
+    {
+      "word": "3",
+      "expected": "ADV",
+      "detected": "NUM",
+      "match": false
+    },
+    {
+      "word": "años",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "apenas",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "pasaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "ahí",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "jugando",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "entre",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "las",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "cajas",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "NOUN",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "zapatos",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "muy",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "tranquila",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "feliz",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "una",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "persona",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "muy",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "sociable",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "soy",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "hija",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "única",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "me",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "VERB",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "pasaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "ligeramente",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "sola",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "ahí",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "jugando",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "imaginación",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "ligeramente",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "si",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "tenía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "varios",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "amigos",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "tenía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "especialmente",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "mejor",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "amigo",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "llamaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "Alan",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "acuerdo",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "bien",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "su",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "apariencia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "física",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "si",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "acuerdo",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "perfectamente",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "él",
+      "expected": "DET",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "sabía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "coser",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "veces",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "venia",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "a",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "tienda",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "conmigo",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "traía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "algunos",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "vestidos",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "para",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mis",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "muñecas",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "divertía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mucho",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "él",
+      "expected": "DET",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "lo",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "recuerdo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "bien",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "Recuerdo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "perfectamente",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "aquel",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "día",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "iba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "como",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "otro",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "día",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "nos",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "dirigíamos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "zapatería",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "llevaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "tomada",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "mano",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "llegamos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "busco",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "las",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "llaves",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "no",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "las",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "encontró",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "las",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "había",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "dejado",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "dentro",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "zapatería",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "Fuimos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "cerrajero",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "metió",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "zapatería",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "Una",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "vez",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "dentro",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "cerrajero",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "ladrón",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "metió",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "saqueo",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "todo",
+      "expected": "ADV",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "llevo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "demasiada",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "mercancía",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "fue",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "policía",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "miraba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "asustada",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "como",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "aun",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "una",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "niña",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "pequeña",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "miraba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "explicarle",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "al",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "policía",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "mientras",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "comía",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "helado",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "ese",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "día",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "nos",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "fue",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "muy",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "mal",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tanto",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tuvimos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mudarnos",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "o",
+      "expected": "ADJ",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "t",
+      "expected": "ADJ",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "ro",
+      "expected": "ADJ",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "estado",
+      "expected": "NOUN",
+      "detected": "AUX",
+      "match": false
+    },
+    {
+      "word": "a",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "Michoacán",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "donde",
+      "expected": "ADV",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "vivía",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "familia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "Ahí",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "viví",
+      "expected": "VERB",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "gran",
+      "expected": "ADV",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "niñez",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "en",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "un",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "pequeño",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "pueblo",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "un",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "nombre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "raro",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "ahí",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "estuve",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "desde",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "los",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "4",
+      "expected": "ADV",
+      "detected": "NUM",
+      "match": false
+    },
+    {
+      "word": "a",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "los",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "9",
+      "expected": "ADV",
+      "detected": "NUM",
+      "match": false
+    },
+    {
+      "word": "años",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "pasaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "si",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "pasaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mas",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "el",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "quedo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "cuidado",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "madre",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "se",
+      "expected": "ADP",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "iba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "trabajar",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "casi",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "toda",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "semana",
+      "expected": "ADV",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "de",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "personal",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "de",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "limpieza",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "para",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "una",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "familia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "en",
+      "expected": "ADV",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "otro",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "municipio",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "Mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tenia",
+      "expected": "VERB",
+      "detected": "PROPN",
+      "match": false
+    },
+    {
+      "word": "tanta",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "paciencia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "conmigo",
+      "expected": "ADJ",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "me",
+      "expected": "ADJ",
+      "detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "regañaba",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "por",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "cosas",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "tan",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "absurdas",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "ahí",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "si",
+      "expected": "ADV",
+      "detected": "SCONJ",
+      "match": false
+    },
+    {
+      "word": "comencé",
+      "expected": "VERB",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "ser",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "alguien",
+      "expected": "NOUN",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "solitaria",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "solamente",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "yo",
+      "expected": "NOUN",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADJ",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "NOUN",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "imaginación",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "nuevo",
+      "expected": "DET",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "era",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "duro",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "yo",
+      "expected": "NOUN",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "no",
+      "expected": "ADJ",
+      "detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "diría",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "el",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "mejor",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "padre",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "pero",
+      "expected": "ADJ",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "supongo",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "hacia",
+      "expected": "VERB",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "podía",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "No",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tengo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "una",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "gran",
+      "expected": "ADV",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "con",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "el",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "para",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "ser",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "vivo",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "actualmente",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "en",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "aquella",
+      "expected": "ADV",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "pequeña",
+      "expected": "ADJ",
+      "detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "comunidad",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "abuela",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "paterna",
+      "expected": "NOUN",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "fue",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "por",
+      "expected": "ADJ",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "nosotros",
+      "expected": "NOUN",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "nos",
+      "expected": "VERB",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "trajo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "donde",
+      "expected": "ADV",
+      "detected": "PRON",
+      "match": false
+    },
+    {
+      "word": "vivo",
+      "expected": "VERB",
+      "detected": "ADJ",
+      "match": false
+    },
+    {
+      "word": "actualmente",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "Zacatecas",
+      "expected": "NOUN",
+      "detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "Acá",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "pasé",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "el",
+      "expected": "DET",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "resto",
+      "expected": "ADJ",
+      "detected": "NOUN",
+      "match": false
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "niñez",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "hasta",
+      "expected": "VERB",
+      "detected": "ADP",
+      "match": false
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "adolescencia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "y",
+      "expected": "ADP",
+      "detected": "CCONJ",
+      "match": false
+    },
+    {
+      "word": "hoy",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "actualmente",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "hasta",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "casi",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "la",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "adultez",
+      "expected": "NOUN",
+      "detected": "VERB",
+      "match": false
+    },
+    {
+      "word": "acá",
+      "expected": "ADV",
+      "detected": "PROPN",
+      "match": false
+    },
+    {
+      "word": "digamos",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "hice",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "varios",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "amigos",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "no",
+      "expected": "ADV",
+      "detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "tengo",
+      "expected": "VERB",
+      "detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "memorias",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "memorables",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "de",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "adolescencia",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "a",
+      "expected": "ADP",
+      "detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "esa",
+      "expected": "NOUN",
+      "detected": "DET",
+      "match": false
+    },
+    {
+      "word": "es",
+      "expected": "ADP",
+      "detected": "AUX",
+      "match": false
+    },
+    {
+      "word": "mi",
+      "expected": "ADJ",
+      "detected": "DET",
+      "match": true
+    },
+    {
+      "word": "vida",
+      "expected": "NOUN",
+      "detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "soy",
+      "expected": "VERB",
+      "detected": "AUX",
+      "match": true
+    }
+  ],
+  "recommendations": [
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "sugerencia": "quitó"
+    },
+    {
+      "message": "Si es del v. ‘tener’, lleva tilde. Puede ser, más raramente, un sustantivo sin tilde.",
+      "sugerencia": "tenía"
+    },
+    {
+      "message": "Como locución causal, se escribe con coma.",
+      "sugerencia": ", ya que"
+    },
+    {
+      "message": "Si es del v. ‘venir’, lleva tilde. Puede ser un sustantivo sin tilde (ej. ‘con la venia’).",
+      "sugerencia": "venía"
+    },
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "sugerencia": "llevó"
+    },
+    {
+      "message": "Se escribe con tilde si equivale a ‘todavía’. Se escribe sin tilde si significa ‘hasta’ o ‘incluso’.",
+      "sugerencia": "aún"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "sugerencia": "más"
+    },
+    {
+      "message": "El pronombre personal «él» lleva tilde.",
+      "sugerencia": "él"
+    },
+    {
+      "message": "Si el verbo está en pasado, se escribe con tilde.",
+      "sugerencia": "quedó"
+    },
+    {
+      "message": "Si es del v. ‘hacer’, se escribe con tilde.",
+      "sugerencia": "hacía"
+    },
+    {
+      "message": "El pronombre personal «él» lleva tilde.",
+      "sugerencia": "él"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "sugerencia": "más"
+    },
+    {
+      "message": "Se ha encontrado un posible error ortográfico.",
+      "sugerencia": "así"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "sugerencia": "más"
+    },
+    {
+      "message": "Como locución causal, se escribe con coma.",
+      "sugerencia": ", ya que"
+    },
+    {
+      "message": "Si no equivale a ‘pero’ o ‘sino’, se escribe con tilde.",
+      "sugerencia": "más"
+    }
+  ]
+}

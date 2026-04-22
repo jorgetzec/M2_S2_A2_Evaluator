@@ -1,0 +1,30 @@
+# Task: Migrate n8n Workflow to Streamlit App
+
+- [ ] Planning & Design [/]
+    - [x] Analyze existing [processor_v4.py](file:///d:/CODE/Code3_Coding%20and%20Data/20260209_n8n_docker_flujos/workflow_scripts/processor_v4.py) and related scripts
+    - [ ] Research file conversion libraries (PDF, PPTX, Video, OCR)
+    - [ ] Design JSON/TOON schema
+    - [ ] Create Implementation Plan
+- [x] Project Setup [x]
+    - [x] Initialize project structure in `20260318_M02S1AI2_app_evaluador`
+    - [x] Create [Dockerfile](file:///D:/CODE/Code3_Coding%20and%20Data/20260318_M02S1AI2_app_evaluador/Dockerfile) (including Tesseract and FFmpeg)
+    - [x] Setup [requirements.txt](file:///D:/CODE/Code3_Coding%20and%20Data/20260318_M02S1AI2_app_evaluador/requirements.txt)
+- [x] Core Implementation [x]
+    - [x] File processing module (Docx, PDF, PPTX, Images, Video/Audio)
+    - [x] OCR Integration (Tesseract)
+    - [x] Audio/Video Extraction (FFmpeg/MoviePy)
+    - [x] Document segmentation UI
+    - [x] Analysis engine (Word count, Highlights, Spellcheck)
+    - [x] Rubric evaluation engine (Automated + Manual Fallback)
+    - [x] LLM Feedback generation (Gemini)
+- [x] UI/UX Development [x]
+    - [x] Main dashboard
+    - [x] Media preview & extraction status
+    - [x] Manual Evaluation Form
+    - [x] Preview & Correction panel
+    - [x] Results & Feedback display
+    - [x] Export (JSON/TOON) functionality
+- [x] Verification & Testing [x]
+    - [x] Manual testing with sample files
+    - [x] Docker build verification (Configuration ready)
+    - [x] Final Walkthrough

@@ -1,0 +1,613 @@
+{
+  "filename": "PerezSanchez_Pedro_M02S1AI2.docx",
+  "filename_valid": true,
+  "metrics": {
+    "story_length": {
+      "words": 296,
+      "pages_approx": 0.8,
+      "status": "Fuera de rango"
+    },
+    "comparison_length": {
+      "words": 6,
+      "lines_approx": 1,
+      "status": "Revisar extensión"
+    },
+    "highlight_stats": {
+      "total": 30,
+      "correct": 29,
+      "accuracy": 96.7
+    },
+    "audio_found": true,
+    "ai_indicadores": {
+      "guion_largo_count": 0,
+      "guion_largo_frecuente": false,
+      "frases_tipicas_count": 1,
+      "frases_tipicas_lista": [
+        "a lo largo de mi vida"
+      ],
+      "divisores_lineas": false,
+      "divisores_count": 0,
+      "preguntas_finales_count": 0,
+      "menciones_prompt_ia": false,
+      "palabras_analizadas": 302,
+      "resumen": "frases típicas de redacción formal/IA (1): a lo largo de mi vida"
+    },
+    "orthography_errors": 1,
+    "orthography_error_reason": null,
+    "orthography_matches": [
+      {
+        "message": "Si el adverbio «actualmente» se refiere a toda la frase, y no solo al verbo, es recomendable usar una coma.",
+        "contexto": "... todas me han dejado alguna enseñanza.  Actualmente estoy estudiando en Prepa en Línea-SEP ...",
+        "sugerencia": "Actualmente,"
+      }
+    ]
+  },
+  "segments": {
+    "historia": {
+      "text": "Mi nombre es Pedro Luis de Jesús Pérez Sánchez y nací el 25 de enero de 2009 en México. Esta es una parte de mi historia hasta ahora. A lo largo de mi vida he vivido diferentes experiencias que poco a poco me han ayudado a aprender y a crecer como persona.\n\nCuando era niño me gustaba mucho jugar y pasar tiempo con mi familia. Recuerdo que mi niñez fue una etapa tranquila donde me divertía mucho. Me gustaba salir a jugar, ver televisión y convivir con las personas que estaban cerca de mí.\n\nMi familia siempre ha sido muy importante en mi vida porque gracias a ellos he aprendido valores como el respeto, la responsabilidad y la importancia de esforzarse para lograr las cosas.\n\nCuando empecé a ir a la escuela conocí a muchos compañeros y poco a poco fui haciendo amigos. En la escuela viví diferentes experiencias, algunas buenas y otras un poco difíciles. Hubo materias que me gustaban más que otras, pero con el tiempo fui entendiendo que estudiar es importante para el futuro. También aprendí que cuando algo cuesta trabajo no significa que no se pueda lograr, sino que hay que seguir intentando.\n\nDurante mi adolescencia he empezado a pensar más en mi futuro y en lo que quiero hacer más adelante. También he vivido diferentes experiencias que me han ayudado a aprender más sobre la vida y sobre mí mismo. Algunas situaciones han sido fáciles y otras un poco complicadas, pero todas me han dejado alguna enseñanza.\n\nActualmente estoy estudiando en Prepa en Línea-SEP porque quiero continuar con mis estudios y prepararme mejor para el futuro. Sé que todavía me faltan muchas cosas por vivir y aprender, pero también sé que cada experiencia ayuda a crecer como persona.\n\nLink del audio",
+      "word_count": 296
+    },
+    "enlace": {
+      "text": "https://drive.google.com/file/d/1v4jIvXZZGh39ixg1xg-11yLHO1_5dBze/view?usp",
+      "url": "https://drive.google.com/file/d/1v4jIvXZZGh39ixg1xg-11yLHO1_5dBze/view?usp"
+    },
+    "highlights": [
+      {
+        "word": "era",
+        "pos_detected": "AUX",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "niño",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "gustaba",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "mucho",
+        "pos_detected": "ADV",
+        "expected_pos": "ADV",
+        "match": true,
+        "category": "Adverbio (Rosa)"
+      },
+      {
+        "word": "jugar",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "pasar",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "tiempo",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "con",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "familia",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "Recuerdo",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "niñez",
+        "pos_detected": "PROPN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "fue",
+        "pos_detected": "AUX",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "una",
+        "pos_detected": "DET",
+        "expected_pos": "DET",
+        "match": true,
+        "category": "Artículo (Gris)"
+      },
+      {
+        "word": "etapa",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "tranquila",
+        "pos_detected": "ADJ",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "divertía",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "mucho",
+        "pos_detected": "ADV",
+        "expected_pos": "ADV",
+        "match": true,
+        "category": "Adverbio (Rosa)"
+      },
+      {
+        "word": "gustaba",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "salir",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "a",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "jugar",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "ver",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "televisión",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "convivir",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "con",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "las",
+        "pos_detected": "DET",
+        "expected_pos": "DET",
+        "match": true,
+        "category": "Artículo (Gris)"
+      },
+      {
+        "word": "personas",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "estaban",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "cerca",
+        "pos_detected": "ADV",
+        "expected_pos": "ADJ",
+        "match": false,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "de",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      }
+    ],
+    "audio_url": "https://drive.google.com/file/d/1v4jIvXZZGh39ixg1xg-11yLHO1_5dBze/view?usp",
+    "parrafo_comparacion": {
+      "text": "Diferencias entre comunicación oral y escrita",
+      "line_count": 1,
+      "word_count": 6
+    },
+    "transcripcion_audio": {
+      "text": "Hola, mi nombre es Pedro Luis Pérez Anchez y nací el 25 de enero.  En este audio voy a contar un poco sobre mi historia y algunas de las experiencias que he vivido hasta ahora.  Cuando era niño me gustaba mucho jugar y pasar tiempo con mi familia.  Recuerdo que mi niña es una etapa muy tranquila en la que me divertía bastante.  Me gustaba salir a jugar, a vertele visión y convivir con mis amigos.  También pasaba mucho tiempo con mi familia que siempre ha sido una parte muy importante en mi vida.  Cuando empecé a ir a la escuela conocí a muchas personas y poco a poco fui haciendo amigos.  En la escuela viví diferentes experiencias, algunas muy buenas y otras un poco difíciles.  Hubo materiales que me gustaban más que otras, pero con el tiempo fíjense en diéndose que estudiare es importante para poder tener más oportunidades en el futuro.  Durante mi adolescencia he empezado a pensar más en mi futuro y en lo que quieran lograr.  También he vivido algunas experiencias que me han ayudado a aprender más sobre la vida y a madurar poco a poco.  Cada etapa de la vida de enseñanzas que ayuda a crecer como persona.  Actualmente estoy estudiando en prepáil ni hace porque quiero continuar con mis estudios y prepararme mejor para el futuro.  Para mí es importante seguir aprendiendo y tratar de mejorar cada día.  Sé que todavía me faltan muchas cosas por mi vida y aprender, pero también sé que cada experiencia forma parte de mi historia.  Espero poder seguir cumpliendo mis metas y construir un buen futuro.  Además de eso, también he vivido muchos momentos importantes que me han ayudado a formar la persona que soy.  Hoy, ¿qué de experiencia ya sea buena o difícil? Me ha dejado diferentes enseñanzas.  Que me ayudan a mejorar y a seguir adelante.  A lo largo de mi vida he aprendido que es importante es forzarse para lograr lo que uno quiere.  A veces las cosas no salen como esperamos, pero siempre se puede intentar de nuevo y aprender de los errores.  También he aprendido que las personas que nos rodean como la familia y los amigos son muy importantes porque nos apoyan, nos aconsejan y están con nosotros.  Los momentos buenos y en los momentos un poco complicados.  En el futuro me gustaría seguir aprendiendo muchas cosas más, terminan mis estudios y lograr mis objetivos personales.  Sé que todavía tengo muchas experiencias por vivir y muchas cosas por aprender.  Esta es una pequeña parte de mi historia y estoy seguro de que con el tiempo seguiré escribiendo nuevos capítulos en mi vida.",
+      "error": null
+    }
+  },
+  "errors": [],
+  "titulo_presente": true,
+  "fuente_arial_12": false,
+  "evaluation": {
+    "cognitivo": {
+      "relato_escrito": {
+        "extension_ok": false,
+        "palabras": 296,
+        "cuartillas": 0.8,
+        "rango_esperado": "350-1000 palabras (1-2 cuartillas)",
+        "titulo_ok": true,
+        "fuente_ok": false,
+        "nivel": "Aceptable",
+        "puntaje": 80
+      },
+      "clases_palabras": {
+        "pct_correctas": 96.7,
+        "total": 30,
+        "correctas": 29,
+        "nivel": "Experto",
+        "puntaje": 100
+      },
+      "audio": {
+        "presente": true,
+        "liga_ok": true,
+        "duracion_segundos": 182.832,
+        "duracion_ok": true,
+        "rango_esperado": "150-210 s (3 min ± 30s)",
+        "nivel": "Experto",
+        "puntaje": 100
+      },
+      "parrafo_oral_escrito": {
+        "existe": true,
+        "lineas": 1,
+        "palabras": 6,
+        "extension_ok": false,
+        "rango_esperado": "3-14 líneas (flexiblev4; ideal 5-10)",
+        "nivel": "Aceptable",
+        "puntaje": 80
+      },
+      "nivel_global": "Capacitado",
+      "puntaje_global": 90
+    },
+    "actitudinal": {
+      "indicaciones": [
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "cumplidos": 9,
+      "total": 12,
+      "nivel": "Capacitado",
+      "puntaje": 90
+    },
+    "comunicativo": {
+      "errores_ortografia_puntuacion": 1,
+      "ortografia_motivo_fallo": null,
+      "errores_detalle": [
+        {
+          "message": "Si el adverbio «actualmente» se refiere a toda la frase, y no solo al verbo, es recomendable usar una coma.",
+          "contexto": "... todas me han dejado alguna enseñanza.  Actualmente estoy estudiando en Prepa en Línea-SEP ...",
+          "sugerencia": "Actualmente,"
+        }
+      ],
+      "nivel_ortografia": "Experto",
+      "puntaje_ortografia": 100,
+      "nota": null,
+      "organizacion": {
+        "claridad": null,
+        "coherencia": null,
+        "precision": null,
+        "extracto_claridad": null,
+        "extracto_coherencia": null,
+        "extracto_precision": null
+      },
+      "netiqueta": {
+        "cumple": true,
+        "nivel": "Experto"
+      },
+      "audio_calidad": {
+        "calidad_tecnica": null,
+        "fluidez": null,
+        "comprensibilidad": null,
+        "lee_o_narra": null,
+        "observaciones": null
+      }
+    },
+    "pensamiento_critico": {
+      "diferencia_oral_escrito": {
+        "identifica": null,
+        "nivel_identificacion": null,
+        "coherencia_analisis": null,
+        "extractos": null
+      },
+      "clases_palabras": {
+        "comprende": true,
+        "nivel": "Experto"
+      }
+    },
+    "originalidad": {
+      "deduccion": 0,
+      "indicadores_ia": {
+        "guion_largo_count": 0,
+        "guion_largo_frecuente": false,
+        "frases_tipicas_count": 1,
+        "frases_tipicas_lista": [
+          "a lo largo de mi vida"
+        ],
+        "divisores_lineas": false,
+        "divisores_count": 0,
+        "preguntas_finales_count": 0,
+        "menciones_prompt_ia": false,
+        "palabras_analizadas": 302,
+        "resumen": "frases típicas de redacción formal/IA (1): a lo largo de mi vida"
+      },
+      "nota": "frases típicas de redacción formal/IA (1): a lo largo de mi vida"
+    },
+    "resumen": {
+      "puntaje_cognitivo": 90,
+      "nivel_cognitivo": "Capacitado",
+      "puntaje_actitudinal": 90,
+      "nivel_actitudinal": "Capacitado"
+    },
+    "resumen_llm": [
+      "Relato: 296 pal (0.8 cuartillas), título=sí, Arial12=no | Esperado: 350-1000 pal, título, Arial 12",
+      "Clases palabras: 96.7% (29/30) | Esperado: ≥85% Experto",
+      "Audio: liga=sí, duración=182 s | Esperado: liga al final, 150-210 s (3 min ± 30s)",
+      "Párrafo oral/escrito: 6 pal, ~1 líneas | Esperado: 3-12 líneas",
+      "Indicaciones: 9/12. No cumple: extensión (1-2 cuartillas), Arial 12, párrafo 5-10 líneas.",
+      "Comunicativo (ortografía): 1 errores | 0-2=Experto, 3-5=Capacitado, 6-8=Aceptable, 9-12=Aprendiz, >12=R.Apoyo",
+      "Originalidad (indicadores IA): frases típicas de redacción formal/IA (1): a lo largo de mi vida"
+    ]
+  },
+  "audio_duration_seconds": 182.832,
+  "ollama_inputs": {
+    "historia_snippet": "Mi nombre es Pedro Luis de Jesús Pérez Sánchez y nací el 25 de enero de 2009 en México. Esta es una parte de mi historia hasta ahora. A lo largo de mi vida he vivido diferentes experiencias que poco a poco me han ayudado a aprender y a crecer como persona.\n\nCuando era niño me gustaba mucho jugar y pasar tiempo con mi familia. Recuerdo que mi niñez fue una etapa tranquila donde me divertía mucho. Me gustaba salir a jugar, ver televisión y convivir con las personas que estaban cerca de mí.\n\nMi familia siempre ha sido muy importante en mi vida porque gracias a ellos he aprendido valores como el respeto, la responsabilidad y la importancia de esforzarse para lograr las cosas.\n\nCuando empecé a ir a la escuela conocí a muchos compañeros y poco a poco fui haciendo amigos. En la escuela viví diferentes experiencias, algunas buenas y otras un poco difíciles. Hubo materias que me gustaban más que otras, pero con el tiempo fui entendiendo que estudiar es importante para el futuro. También aprendí que cuando algo cuesta trabajo no significa que no se pueda lograr, sino que hay que seguir intentando.\n\nDurante mi adolescencia he empezado a pensar más en mi futuro y en lo que quiero hacer más adelante. También he vivido diferentes experiencias que me han ayudado a aprender más sobre la vida y sobre mí mismo. Algunas situaciones han sido fáciles y otras un poco complicadas, pero todas me han dejado alguna enseñanza.\n\nActualmente estoy estudiando en Prepa en Línea-SEP porque quiero continuar con mis estudios y prepararme mejor para el futuro. Sé que todavía me faltan muchas cosas por vivir y aprender, pero también sé que cada experiencia ayuda a crecer como persona.\n\nLink del audio",
+    "transcripcion_snippet": "Hola, mi nombre es Pedro Luis Pérez Anchez y nací el 25 de enero.  En este audio voy a contar un poco sobre mi historia y algunas de las experiencias que he vivido hasta ahora.  Cuando era niño me gustaba mucho jugar y pasar tiempo con mi familia.  Recuerdo que mi niña es una etapa muy tranquila en la que me divertía bastante.  Me gustaba salir a jugar, a vertele visión y convivir con mis amigos.  También pasaba mucho tiempo con mi familia que siempre ha sido una parte muy importante en mi vida.  Cuando empecé a ir a la escuela conocí a muchas personas y poco a poco fui haciendo amigos.  En la escuela viví diferentes experiencias, algunas muy buenas y otras un poco difíciles.  Hubo materiales que me gustaban más que otras, pero con el tiempo fíjense en diéndose que estudiare es importante para poder tener más oportunidades en el futuro.  Durante mi adolescencia he empezado a pensar más en mi futuro y en lo que quieran lograr.  También he vivido algunas experiencias que me han ayudado a aprender más sobre la vida y a madurar poco a poco.  Cada etapa de la vida de enseñanzas que ayuda a crecer como persona.  Actualmente estoy estudiando en prepáil ni hace porque quiero continuar con mis estudios y prepararme mejor para el futuro.  Para mí es importante seguir aprendiendo y tratar de mejorar cada día.  Sé que todavía me faltan muchas cosas por mi vida y aprender, pero también sé que cada experiencia forma parte de mi historia.  Espero poder seguir cumpliendo mis metas y construir un buen futuro.  Además de eso, también he vivido muchos momentos importantes que me han ayudado a formar la persona que soy.  Hoy, ¿qué de experiencia ya sea buena o difícil? Me ha dejado diferentes enseñanzas.  Que me ayudan a mejorar y a seguir adelante.  A lo largo de mi vida he aprendido que es importante es forzarse para lograr lo que uno quiere.  A veces las cosas no salen como esperamos, pero siempre se puede intentar de nuevo y aprender de los errores.  También he aprendido que las pe...",
+    "parrafo_snippet": "Diferencias entre comunicación oral y escrita",
+    "tiene_historia": true,
+    "tiene_transcripcion": true,
+    "tiene_parrafo": true
+  },
+  "highlights_tabla": [
+    {
+      "word": "era",
+      "category": "Verbo (Verde)",
+      "pos_detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "niño",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "gustaba",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mucho",
+      "category": "Adverbio (Rosa)",
+      "pos_detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "jugar",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "pasar",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "tiempo",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "con",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "familia",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "Recuerdo",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "niñez",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "PROPN",
+      "match": true
+    },
+    {
+      "word": "fue",
+      "category": "Verbo (Verde)",
+      "pos_detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "una",
+      "category": "Artículo (Gris)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "etapa",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "tranquila",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "ADJ",
+      "match": true
+    },
+    {
+      "word": "divertía",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "mucho",
+      "category": "Adverbio (Rosa)",
+      "pos_detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "gustaba",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "salir",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "jugar",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "ver",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "televisión",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "convivir",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "con",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "las",
+      "category": "Artículo (Gris)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "personas",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "estaban",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "cerca",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "ADV",
+      "match": false
+    },
+    {
+      "word": "de",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    }
+  ],
+  "highlights_total": 30,
+  "version": "v4",
+  "original_filename": "PerezSanchez_Pedro_M02S1AI2.docx"
+}

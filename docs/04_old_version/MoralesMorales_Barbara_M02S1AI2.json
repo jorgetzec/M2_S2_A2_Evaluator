@@ -1,0 +1,708 @@
+{
+  "filename": "MoralesMorales_Barbara_M02S1AI2.docx",
+  "filename_valid": true,
+  "metrics": {
+    "story_length": {
+      "words": 860,
+      "pages_approx": 2.5,
+      "status": "Correcta"
+    },
+    "comparison_length": {
+      "words": 227,
+      "lines_approx": 18,
+      "status": "Revisar extensión"
+    },
+    "highlight_stats": {
+      "total": 33,
+      "correct": 32,
+      "accuracy": 97.0
+    },
+    "audio_found": true,
+    "ai_indicadores": {
+      "guion_largo_count": 0,
+      "guion_largo_frecuente": false,
+      "frases_tipicas_count": 0,
+      "frases_tipicas_lista": [],
+      "divisores_lineas": false,
+      "divisores_count": 0,
+      "preguntas_finales_count": 0,
+      "menciones_prompt_ia": false,
+      "palabras_analizadas": 1087,
+      "resumen": "Sin indicadores claros de IA en el texto analizado."
+    },
+    "orthography_errors": 7,
+    "orthography_error_reason": null,
+    "orthography_matches": [
+      {
+        "message": "Posible error: repetición de una palabra",
+        "contexto": "...s padres me pusieron por nombre Bárbara Morales Morales. Desde que era bebé tuve reflujo, por l...",
+        "sugerencia": "Morales"
+      },
+      {
+        "message": "Si el adverbio «lamentablemente» se refiere a toda la frase, y no solo al verbo, es recomendable usar una coma.",
+        "contexto": "...é en tres competencias y gané las tres. Lamentablemente después me enfermé de la nariz y no pod...",
+        "sugerencia": "Lamentablemente,"
+      },
+      {
+        "message": "Se ha encontrado un posible error ortográfico.",
+        "contexto": "....2.  Luego pasé a la preparatoria en el CETIS 54. No fue una prepa extraordinaria, pe...",
+        "sugerencia": "BETIS"
+      },
+      {
+        "message": "En este contexto es recomendable usar una coma.",
+        "contexto": "...ia, pero tampoco fue mala. En el primer trimestre me fue un poco mal, pero en el segundo ...",
+        "sugerencia": "trimestre,"
+      },
+      {
+        "message": "En este contexto es recomendable usar una coma.",
+        "contexto": "...ejorar mis calificaciones. En el tercer trimestre tuve problemas familiares y me fui a vi...",
+        "sugerencia": "trimestre,"
+      },
+      {
+        "message": "Se ha encontrado un posible error ortográfico.",
+        "contexto": "...na persona maravillosa: bajita, de piel morenita, ojos color miel muy claros y cabello l...",
+        "sugerencia": "morenito"
+      },
+      {
+        "message": "Se ha encontrado un posible error ortográfico.",
+        "contexto": "...ncias sobre expresarnos de forma oral y escritaEn mi caso, es muy diferente expresarnos d...",
+        "sugerencia": "escrita En"
+      }
+    ]
+  },
+  "segments": {
+    "historia": {
+      "text": "Nací el 5 de enero de 2009. Mis padres me pusieron por nombre Bárbara Morales Morales. Desde que era bebé tuve reflujo, por lo que fue un tiempo difícil para mí, ya que me enfermaba constantemente.\n\nCuando cumplí 4 años me inscribieron al kínder. Fue una etapa complicada, no por el estudio, sino porque seguía enfermándome mucho y pasaba mucho tiempo en hospitales haciéndome estudios.\n\nDespués entré a la primaria. También fue una etapa difícil al inicio, porque en la primera escuela a la que entré se burlaban de mí por ser alta y me decían apodos feos. Por eso me cambiaron a otra escuela más cerca de mi casa y donde no me molestaran. En esa escuela fue todo lo contrario: hice amigos y pude estudiar bien. Sin embargo, con el tiempo volvieron algunas burlas y además las cosas con mi papá no estaban bien.\n\nMis padres se separaron antes de que yo naciera. Yo veía a mi papá solo los fines de semana y por muy poco tiempo. No sé si eso influyó en que no tengamos una buena relación. A veces mi papá desaparecía de mi vida por dos o tres años. Es algo triste saber que no puedes contar con una persona tan importante, pero en ese momento pude superarlo con la ayuda de la psicóloga de mi primaria, quien me ayudó mucho.\n\nCon el tiempo fui mejorando y seguí estudiando con buenas calificaciones. Cuando pasé a cuarto de primaria hubo una convocatoria para atletismo. Me inscribí, participé en tres competencias y gané las tres. Lamentablemente después me enfermé de la nariz y no podía respirar bien, así que no pude asistir a la última competencia.\n\nSeguí con mis estudios, aunque en algún momento los descuidé un poco por el atletismo. Luego pasé a quinto grado, pero comenzó la pandemia. Terminé la primaria en línea, sin poder ver a mis amigos ni a mis maestros y sin tener mi ceremonia de salida de sexto.\n\nA los 12 años pasé a la secundaria. Fue otra etapa difícil, porque el primer año también lo cursé en línea y después entré presencial. A pesar de eso, la secundaria fue una etapa bonita: nuevas materias, más maestros y nuevos amigos.\n\nSin embargo, también viví momentos muy duros. En primero de secundaria falleció mi tío, una persona muy importante para mí que fue como una figura paterna. Era un hombre alto, de piel blanca, con tatuajes, muy divertido y sonriente. Más que mi tío, fue como un papá para mí.\n\nDespués pasé a segundo de secundaria y mi rendimiento académico bajó mucho. En ese tiempo mi papá volvió a irse de mi vida y además perdí a otra figura paterna muy importante: mi abuelito, a quien siempre llamé papá porque siempre estuvo conmigo. Era un hombre alto, de piel un poco morena, cabello negro y un poco largo, muy chistoso, divertido, cariñoso y protector.\n\nCuando perdí a mi abuelito fue algo muy doloroso, porque sentí que ya no tenía a nadie más en ese lugar. Con el tiempo bajé mucho mis calificaciones y no tenía ganas de hacer nada.\n\nDespués fui mejorando poco a poco. Subí mis calificaciones, empecé a esforzarme y logré terminar la secundaria. No fue con el promedio que yo hubiera querido porque sé que podía dar más, pero aun así lo logré con 8.2.\n\nLuego pasé a la preparatoria en el CETIS 54. No fue una prepa extraordinaria, pero tampoco fue mala. En el primer trimestre me fue un poco mal, pero en el segundo logré mejorar mis calificaciones. En el tercer trimestre tuve problemas familiares y me fui a vivir con mi papá. Durante esa semana no me dejó ir a la escuela, por lo que reprobé dos materias y me dieron de baja temporal. Técnicamente perdí la preparatoria.\n\nDespués de eso pasé un año sin estudiar. Hasta noviembre de 2025 decidí intentar entrar a prepa en línea. Pensé que era una oportunidad para mí. La primera vez no lo logré y no aprobé el módulo, pero me volví a inscribir en la siguiente generación en diciembre. Esta vez sí lo logré y pasé el módulo.\n\nActualmente sigo esforzándome. Mi primer módulo lo pasé con 97.21% de calificación, algo que me hizo sentir muy orgullosa.\n\nAhora sé que ya no tengo a mi tío, a mi abuelito ni a mi papá cerca, pero sí tengo a dos personas muy importantes en mi vida: mi abuelita y mi mamá, mis dos mamás. Son mujeres extraordinarias que siempre han estado para mí.\n\nMi abuelita es una persona maravillosa: bajita, de piel morenita, ojos color miel muy claros y cabello largo y chino. Es divertida, un poco enojona, pero muy cariñosa.\n\nMi mamá también es una mujer increíble y una verdadera guerrera que me sacó adelante. Es de estatura media, de piel blanca, cabello güero y ojos verdes. También es divertida y un poco enojona, pero siempre ha estado para mí.\n\nMi propósito ahora es seguir adelante con mi vida, echarle ganas, mirar hacia el futuro y recordarme a mí misma que sí puedo lograr todo lo que me proponga, sin importar las dificultades que aparezcan en mi camino.",
+      "word_count": 860
+    },
+    "enlace": {
+      "text": "https://drive.google.com/file/d/1mjafiGGE1MnzO3ZZYGj4y_jU5loZYAd8/view?usp=drivesdk",
+      "url": "https://drive.google.com/file/d/1mjafiGGE1MnzO3ZZYGj4y_jU5loZYAd8/view?usp=drivesdk"
+    },
+    "highlights": [
+      {
+        "word": "Mi",
+        "pos_detected": "DET",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "propósito",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "ahora",
+        "pos_detected": "ADV",
+        "expected_pos": "ADV",
+        "match": true,
+        "category": "Adverbio (Rosa)"
+      },
+      {
+        "word": "es",
+        "pos_detected": "AUX",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "seguir",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "adelante",
+        "pos_detected": "ADV",
+        "expected_pos": "ADV",
+        "match": true,
+        "category": "Adverbio (Rosa)"
+      },
+      {
+        "word": "con",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "mi",
+        "pos_detected": "DET",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "vida",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "echarle",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "ganas",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "mirar",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "hacia",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "el",
+        "pos_detected": "DET",
+        "expected_pos": "DET",
+        "match": true,
+        "category": "Artículo (Gris)"
+      },
+      {
+        "word": "futuro",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "recordarme",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "a",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "mí",
+        "pos_detected": "PRON",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "misma",
+        "pos_detected": "PRON",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "sí",
+        "pos_detected": "INTJ",
+        "expected_pos": "ADV",
+        "match": false,
+        "category": "Adverbio (Rosa)"
+      },
+      {
+        "word": "puedo",
+        "pos_detected": "AUX",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "lograr",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "todo",
+        "pos_detected": "DET",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "lo",
+        "pos_detected": "PRON",
+        "expected_pos": "DET",
+        "match": true,
+        "category": "Artículo (Gris)"
+      },
+      {
+        "word": "proponga",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "sin",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "importar",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "las",
+        "pos_detected": "DET",
+        "expected_pos": "DET",
+        "match": true,
+        "category": "Artículo (Gris)"
+      },
+      {
+        "word": "dificultades",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      },
+      {
+        "word": "aparezcan",
+        "pos_detected": "VERB",
+        "expected_pos": "VERB",
+        "match": true,
+        "category": "Verbo (Verde)"
+      },
+      {
+        "word": "en",
+        "pos_detected": "ADP",
+        "expected_pos": "ADP",
+        "match": true,
+        "category": "Preposición (Morado)"
+      },
+      {
+        "word": "mi",
+        "pos_detected": "DET",
+        "expected_pos": "ADJ",
+        "match": true,
+        "category": "Adjetivo (Amarillo)"
+      },
+      {
+        "word": "camino",
+        "pos_detected": "NOUN",
+        "expected_pos": "NOUN",
+        "match": true,
+        "category": "Sustantivo (Azul)"
+      }
+    ],
+    "audio_url": "https://drive.google.com/file/d/1mjafiGGE1MnzO3ZZYGj4y_jU5loZYAd8/view?usp=drivesdk",
+    "parrafo_comparacion": {
+      "text": "Diferencias sobre expresarnos de forma oral y escritaEn mi caso, es muy diferente expresarnos de forma oral y de forma escrita.\n\nEn mi caso, es muy diferente expresarnos de forma oral y de forma escrita.\n\nDe forma oral, hablamos con fluidez y pensamos al momento lo que vamos a decir. A veces usamos palabras como “eh”, “este” o “bueno”, porque estamos pensando mientras hablamos. Además, nuestra comunicación oral es más espontánea y rápida. Podemos usar el tono de voz, los gestos y las expresiones faciales para explicar mejor lo que sentimos o pensamos, y esto ayuda a que la otra persona entienda nuestras emociones e intenciones de manera más directa. También, si alguien no entiende lo que decimos, podemos aclararlo al instante, lo que hace que la interacción sea inmediata y flexible.\n\nDe forma escrita, en cambio, ocurre todo lo contrario. Aquí debemos pensar más en la ortografía, la gramática y la puntuación. Nos preocupamos por elegir las palabras correctas, revisar las comas, los puntos y los espacios, para que nuestro mensaje sea claro y se entienda sin necesidad de aclaraciones inmediatas. La escritura requiere más planificación y cuidado, pero nos permite expresar ideas de manera más precisa, organizada y detallada. Además, la información escrita es permanente, por lo que puede leerse varias veces y consultarse cuando sea necesario, a diferencia de lo oral, que es efímero.",
+      "line_count": 18,
+      "word_count": 227
+    },
+    "transcripcion_audio": {
+      "text": "",
+      "error": "Descarga: Failed to retrieve file url:\n\n\tCannot retrieve the public link of the file. You may need to change\n\tthe permission to 'Anyone with the link', or have had many accesses.\n\tCheck FAQ in https://github.com/wkentaro/gdown?tab=readme-ov-file#faq.\n\nYou may still be able to access the file from the browser:\n\n\thttps://drive.google.com/uc?id=1mjafiGGE1MnzO3ZZYGj4y_jU5loZYAd8\n\nbut Gdown can't. Please check connections and permissions."
+    }
+  },
+  "errors": [],
+  "titulo_presente": true,
+  "fuente_arial_12": false,
+  "evaluation": {
+    "cognitivo": {
+      "relato_escrito": {
+        "extension_ok": true,
+        "palabras": 860,
+        "cuartillas": 2.5,
+        "rango_esperado": "350-1000 palabras (1-2 cuartillas)",
+        "titulo_ok": true,
+        "fuente_ok": false,
+        "nivel": "Capacitado",
+        "puntaje": 90
+      },
+      "clases_palabras": {
+        "pct_correctas": 97.0,
+        "total": 33,
+        "correctas": 32,
+        "nivel": "Experto",
+        "puntaje": 100
+      },
+      "audio": {
+        "presente": true,
+        "liga_ok": true,
+        "duracion_segundos": null,
+        "duracion_ok": false,
+        "rango_esperado": "150-210 s (3 min ± 30s)",
+        "nivel": "Capacitado",
+        "puntaje": 90
+      },
+      "parrafo_oral_escrito": {
+        "existe": true,
+        "lineas": 18,
+        "palabras": 227,
+        "extension_ok": false,
+        "rango_esperado": "3-14 líneas (flexiblev4; ideal 5-10)",
+        "nivel": "Capacitado",
+        "puntaje": 90
+      },
+      "nivel_global": "Capacitado",
+      "puntaje_global": 90
+    },
+    "actitudinal": {
+      "indicaciones": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "cumplidos": 11,
+      "total": 12,
+      "nivel": "Experto",
+      "puntaje": 100
+    },
+    "comunicativo": {
+      "errores_ortografia_puntuacion": 7,
+      "ortografia_motivo_fallo": null,
+      "errores_detalle": [
+        {
+          "message": "Posible error: repetición de una palabra",
+          "contexto": "...s padres me pusieron por nombre Bárbara Morales Morales. Desde que era bebé tuve reflujo, por l...",
+          "sugerencia": "Morales"
+        },
+        {
+          "message": "Si el adverbio «lamentablemente» se refiere a toda la frase, y no solo al verbo, es recomendable usar una coma.",
+          "contexto": "...é en tres competencias y gané las tres. Lamentablemente después me enfermé de la nariz y no pod...",
+          "sugerencia": "Lamentablemente,"
+        },
+        {
+          "message": "Se ha encontrado un posible error ortográfico.",
+          "contexto": "....2.  Luego pasé a la preparatoria en el CETIS 54. No fue una prepa extraordinaria, pe...",
+          "sugerencia": "BETIS"
+        },
+        {
+          "message": "En este contexto es recomendable usar una coma.",
+          "contexto": "...ia, pero tampoco fue mala. En el primer trimestre me fue un poco mal, pero en el segundo ...",
+          "sugerencia": "trimestre,"
+        },
+        {
+          "message": "En este contexto es recomendable usar una coma.",
+          "contexto": "...ejorar mis calificaciones. En el tercer trimestre tuve problemas familiares y me fui a vi...",
+          "sugerencia": "trimestre,"
+        },
+        {
+          "message": "Se ha encontrado un posible error ortográfico.",
+          "contexto": "...na persona maravillosa: bajita, de piel morenita, ojos color miel muy claros y cabello l...",
+          "sugerencia": "morenito"
+        },
+        {
+          "message": "Se ha encontrado un posible error ortográfico.",
+          "contexto": "...ncias sobre expresarnos de forma oral y escritaEn mi caso, es muy diferente expresarnos d...",
+          "sugerencia": "escrita En"
+        }
+      ],
+      "nivel_ortografia": "Aceptable",
+      "puntaje_ortografia": 80,
+      "nota": null,
+      "organizacion": {
+        "claridad": null,
+        "coherencia": null,
+        "precision": null,
+        "extracto_claridad": null,
+        "extracto_coherencia": null,
+        "extracto_precision": null
+      },
+      "netiqueta": {
+        "cumple": true,
+        "nivel": "Experto"
+      },
+      "audio_calidad": {
+        "calidad_tecnica": null,
+        "fluidez": null,
+        "comprensibilidad": null,
+        "lee_o_narra": null,
+        "observaciones": null
+      }
+    },
+    "pensamiento_critico": {
+      "diferencia_oral_escrito": {
+        "identifica": null,
+        "nivel_identificacion": null,
+        "coherencia_analisis": null,
+        "extractos": null
+      },
+      "clases_palabras": {
+        "comprende": true,
+        "nivel": "Experto"
+      }
+    },
+    "originalidad": {
+      "deduccion": 0,
+      "indicadores_ia": {
+        "guion_largo_count": 0,
+        "guion_largo_frecuente": false,
+        "frases_tipicas_count": 0,
+        "frases_tipicas_lista": [],
+        "divisores_lineas": false,
+        "divisores_count": 0,
+        "preguntas_finales_count": 0,
+        "menciones_prompt_ia": false,
+        "palabras_analizadas": 1087,
+        "resumen": "Sin indicadores claros de IA en el texto analizado."
+      },
+      "nota": "Sin indicadores claros de IA en el texto analizado."
+    },
+    "resumen": {
+      "puntaje_cognitivo": 90,
+      "nivel_cognitivo": "Capacitado",
+      "puntaje_actitudinal": 100,
+      "nivel_actitudinal": "Experto"
+    },
+    "resumen_llm": [
+      "Relato: 860 pal (2.5 cuartillas), título=sí, Arial12=no | Esperado: 350-1000 pal, título, Arial 12",
+      "Clases palabras: 97.0% (32/33) | Esperado: ≥85% Experto",
+      "Audio: liga=sí, duración=— | Esperado: liga al final, 150-210 s (3 min ± 30s)",
+      "Párrafo oral/escrito: 227 pal, ~18 líneas | Esperado: 3-12 líneas",
+      "Indicaciones: 11/12. No cumple: Arial 12.",
+      "Comunicativo (ortografía): 7 errores | 0-2=Experto, 3-5=Capacitado, 6-8=Aceptable, 9-12=Aprendiz, >12=R.Apoyo",
+      "Originalidad (indicadores IA): Sin indicadores claros de IA en el texto analizado."
+    ]
+  },
+  "audio_duration_seconds": null,
+  "ollama_inputs": {
+    "historia_snippet": "Nací el 5 de enero de 2009. Mis padres me pusieron por nombre Bárbara Morales Morales. Desde que era bebé tuve reflujo, por lo que fue un tiempo difícil para mí, ya que me enfermaba constantemente.\n\nCuando cumplí 4 años me inscribieron al kínder. Fue una etapa complicada, no por el estudio, sino porque seguía enfermándome mucho y pasaba mucho tiempo en hospitales haciéndome estudios.\n\nDespués entré a la primaria. También fue una etapa difícil al inicio, porque en la primera escuela a la que entré se burlaban de mí por ser alta y me decían apodos feos. Por eso me cambiaron a otra escuela más cerca de mi casa y donde no me molestaran. En esa escuela fue todo lo contrario: hice amigos y pude estudiar bien. Sin embargo, con el tiempo volvieron algunas burlas y además las cosas con mi papá no estaban bien.\n\nMis padres se separaron antes de que yo naciera. Yo veía a mi papá solo los fines de semana y por muy poco tiempo. No sé si eso influyó en que no tengamos una buena relación. A veces mi papá desaparecía de mi vida por dos o tres años. Es algo triste saber que no puedes contar con una persona tan importante, pero en ese momento pude superarlo con la ayuda de la psicóloga de mi primaria, quien me ayudó mucho.\n\nCon el tiempo fui mejorando y seguí estudiando con buenas calificaciones. Cuando pasé a cuarto de primaria hubo una convocatoria para atletismo. Me inscribí, participé en tres competencias y gané las tres. Lamentablemente después me enfermé de la nariz y no podía respirar bien, así que no pude asistir a la última competencia.\n\nSeguí con mis estudios, aunque en algún momento los descuidé un poco por el atletismo. Luego pasé a quinto grado, pero comenzó la pandemia. Terminé la primaria en línea, sin poder ver a mis amigos ni a mis maestros y sin tener mi ceremonia de salida de sexto.\n\nA los 12 años pasé a la secundaria. Fue otra etapa difícil, porque el primer año también lo cursé en línea y después entré presencial. A pesar de eso, la secundaria fue una etapa bonit...",
+    "transcripcion_snippet": "",
+    "parrafo_snippet": "Diferencias sobre expresarnos de forma oral y escritaEn mi caso, es muy diferente expresarnos de forma oral y de forma escrita.\n\nEn mi caso, es muy diferente expresarnos de forma oral y de forma escrita.\n\nDe forma oral, hablamos con fluidez y pensamos al momento lo que vamos a decir. A veces usamos palabras como “eh”, “este” o “bueno”, porque estamos pensando mientras hablamos. Además, nuestra comunicación oral es más espontánea y rápida. Podemos usar el tono de voz, los gestos y las expresiones faciales para explicar mejor lo que sentimos o pensamos, y esto ayuda a que la otra persona entienda nuestras emociones e intenciones de manera más directa. También, si alguien no entiende lo que decimos, podemos aclararlo al instante, lo que hace que la interacción sea inmediata y flexible.\n\nDe forma escrita, en cambio, ocurre todo lo contrario. Aquí debemos pensar más en la ortografía, la gramática y la puntuación. Nos preocupamos por elegir las palabras correctas, revisar las comas, los punt...",
+    "tiene_historia": true,
+    "tiene_transcripcion": false,
+    "tiene_parrafo": true
+  },
+  "highlights_tabla": [
+    {
+      "word": "Mi",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "propósito",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "ahora",
+      "category": "Adverbio (Rosa)",
+      "pos_detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "es",
+      "category": "Verbo (Verde)",
+      "pos_detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "seguir",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "adelante",
+      "category": "Adverbio (Rosa)",
+      "pos_detected": "ADV",
+      "match": true
+    },
+    {
+      "word": "con",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "vida",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "echarle",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "ganas",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "mirar",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "hacia",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "el",
+      "category": "Artículo (Gris)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "futuro",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "recordarme",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "a",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mí",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "misma",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "sí",
+      "category": "Adverbio (Rosa)",
+      "pos_detected": "INTJ",
+      "match": false
+    },
+    {
+      "word": "puedo",
+      "category": "Verbo (Verde)",
+      "pos_detected": "AUX",
+      "match": true
+    },
+    {
+      "word": "lograr",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "todo",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "lo",
+      "category": "Artículo (Gris)",
+      "pos_detected": "PRON",
+      "match": true
+    },
+    {
+      "word": "proponga",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "sin",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "importar",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "las",
+      "category": "Artículo (Gris)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "dificultades",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    },
+    {
+      "word": "aparezcan",
+      "category": "Verbo (Verde)",
+      "pos_detected": "VERB",
+      "match": true
+    },
+    {
+      "word": "en",
+      "category": "Preposición (Morado)",
+      "pos_detected": "ADP",
+      "match": true
+    },
+    {
+      "word": "mi",
+      "category": "Adjetivo (Amarillo)",
+      "pos_detected": "DET",
+      "match": true
+    },
+    {
+      "word": "camino",
+      "category": "Sustantivo (Azul)",
+      "pos_detected": "NOUN",
+      "match": true
+    }
+  ],
+  "highlights_total": 33,
+  "version": "v4",
+  "original_filename": "MoralesMorales_Barbara_M02S1AI2.docx"
+}

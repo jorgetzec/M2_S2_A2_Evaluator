@@ -1,0 +1,5 @@
+- Que el json tenga información duplicada
+- Que tenga como debe iniciar y terminar
+- Que incluya fragmentos en la retro. 
+- Que el json se exporte con el nombre del estudiante.
+- No detecta cuando es color de letra. 
