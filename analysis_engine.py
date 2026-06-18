@@ -6,11 +6,26 @@ import spacy
 from faster_whisper import WhisperModel
 import tempfile
 
-# Attempt to load spaCy
-try:
-    nlp = spacy.load("es_core_news_sm")
-except:
-    nlp = None
+# Attempt to load spaCy (modelo instalado vía requirements.txt o Dockerfile)
+def _load_spacy_nlp():
+    try:
+        return spacy.load("es_core_news_sm")
+    except Exception:
+        pass
+    try:
+        import es_core_news_sm  # paquete wheel del modelo
+        return es_core_news_sm.load()
+    except Exception:
+        pass
+    try:
+        from spacy.cli import download
+        download("es_core_news_sm")
+        return spacy.load("es_core_news_sm")
+    except Exception:
+        return None
+
+
+nlp = _load_spacy_nlp()
 
 def _clean_word_token(text):
     """Normaliza token: quita espacios invisibles y puntuación para NLP/heurísticas."""

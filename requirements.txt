@@ -4,7 +4,9 @@ pypdf
 pymupdf
 python-pptx
 mammoth
-spacy
+spacy>=3.7.0,<3.9.0
+# Modelo español (obligatorio en Streamlit Cloud; en Docker también se instala en Dockerfile)
+https://github.com/explosion/spacy-models/releases/download/es_core_news_sm-3.8.0/es_core_news_sm-3.8.0-py3-none-any.whl
 pytesseract
 moviepy
 faster-whisper

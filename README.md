@@ -29,11 +29,14 @@ python -m venv venv
 venv\Scripts\activate          # Windows
 # source venv/bin/activate     # Linux/macOS
 pip install -r requirements.txt
-python -m spacy download es_core_news_sm
 streamlit run app.py
 ```
 
 La app se abre en `http://localhost:8501`.
+
+### Streamlit Cloud
+
+Streamlit Cloud **no usa** `Dockerfile`; solo instala `requirements.txt`. El modelo `es_core_news_sm` debe estar en ese archivo (ya incluido). Si ves el aviso de spaCy, haz **Reboot app** en el panel tras subir los cambios.
 
 ### Docker
 
