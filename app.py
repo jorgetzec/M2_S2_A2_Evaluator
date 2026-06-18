@@ -556,7 +556,10 @@ if st.session_state.get("feedback"):
             asesor_nombre="Asesor",
         )
         st.markdown('<div class="mono-box" style="background:#eef1f5;border-color:#c7ced8;"><pre style="color:#111827;">' + _html.escape(prompt_preview) + "</pre></div>", unsafe_allow_html=True)
-        st.caption("Referencia: docs/03_data_AI2/m2_ai2_retroalimentacion.md")
+        st.caption(
+            "Lo anterior es el contexto real enviado al modelo (Ollama o Gemini). "
+            "La guía docs/03_data_AI2/m2_ai2_retroalimentacion.md es solo referencia humana; el archivo no se lee automáticamente."
+        )
     # (El cierre del contenedor de retro se hace siempre al final del bloque)
 
 if st.session_state.get("evaluation"):

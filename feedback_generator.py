@@ -192,12 +192,22 @@ def _mapeo_frases(evaluation_results):
     orig = evaluation_results.get("originalidad", {})
 
     lineas = []
+    titulo_ok = evaluation_results.get("titulo_ok", True)
+    fuente_ok = evaluation_results.get("fuente_ok", True)
     # Relato
     nv_relato = cog.get("relato", "")
     if nv_relato == "Experto":
         lineas.append("Tu relato se ha apegado al formato y la extensión solicitados.")
     elif nv_relato in ("Capacitado", "Aceptable"):
-        lineas.append("Recuerda usar fuente Arial de 12 puntos y titular 'El relato de mi historia'.")
+        pendientes = []
+        if not fuente_ok:
+            pendientes.append("usar fuente Arial de 12 puntos")
+        if not titulo_ok:
+            pendientes.append(
+                "incluir un título que identifique tu relato (por ejemplo, sobre tu historia personal)"
+            )
+        if pendientes:
+            lineas.append("Recuerda " + " y ".join(pendientes) + ".")
     else:
         lineas.append("Te sugiero ampliar el relato a una extensión mínima de una cuartilla (aprox. 350 palabras).")
 
@@ -240,6 +250,39 @@ def _mapeo_frases(evaluation_results):
         lineas.append("Incorpora anécdotas y detalles propios para que el relato refleje tu voz personal.")
 
     return " ".join(lineas)
+
+
+def _retro_system_instruction():
+    """System prompt enviado a Gemini y Ollama (mismo texto en generate_feedback y vista previa)."""
+    return (
+        "Eres un asesor virtual de Prepa en Línea-SEP. Redacta una retroalimentación personalizada "
+        "para la actividad \"Mi Historia de Vida\" (M2 AI2).\n"
+        "Usa tono cercano, respetuoso y constructivo. Reconoce el esfuerzo. No uses lenguaje punitivo.\n"
+        "Sigue EXACTAMENTE esta estructura: 1) Saludo \"Hola [Nombre]:\"; 2) Apertura (objetivos, netiqueta); "
+        "3) Ejercicio 1 – Relato; 4) Ejercicio 2 – Clases de palabras; 5) Ejercicio 3 – Audio/video; "
+        "6) Ejercicio 4 – Párrafo oral/escrito; 7) Cumplimiento técnico; 8) Criterio comunicativo (ortografía); "
+        "9) Pensamiento crítico; 10) Originalidad (solo si hay deducción); 11) Recursos sugeridos: recomienda "
+        "VARIOS recursos de la lista proporcionada según cada necesidad a reforzar; 12) Cierre alentador; "
+        "13) \"Saludos,\" + firma.\n"
+        "Si relato_titulo es true en el JSON de evaluación, no sugieras cambiar el título: variantes como "
+        "\"Mi historia\", \"Relatando mi historia\" o \"El relato de mi historia\" son válidas.\n"
+        "Usa frases_sugeridas_mapeo del JSON como guía de qué mencionar o no (no repitas correcciones ya resueltas).\n"
+        "Escribe en español de México. Extensión aproximada 400-600 palabras. "
+        "Incluye en la sección de recursos al menos 2-3 enlaces distintos del listado según las áreas que el alumno deba reforzar."
+    )
+
+
+def _build_retro_user_content(eval_json, story_snippet, recursos_texto):
+    return (
+        f"Genera la retroalimentación siguiendo la estructura indicada. "
+        f"Escribe solo la retroalimentación, sin explicaciones adicionales.\n\n"
+        f"Datos de evaluación (JSON):\n"
+        f"{json.dumps(eval_json, ensure_ascii=False, indent=2)}\n\n"
+        f"Fragmento del relato (para personalizar):\n"
+        f"{story_snippet[:800]}\n\n"
+        f"Listado de recursos del Compilado M02 (recomendar varios según la necesidad a reforzar del alumno):\n"
+        f"{recursos_texto}"
+    )
 
 
 def build_eval_json_for_llm(evaluation_results, fragmentos, estudiante_nombre="Estudiante", curso="M2", asesor_nombre="Asesor"):
@@ -362,22 +405,8 @@ class FeedbackGenerator:
             recursos_texto += f"\n[{etiqueta}]\n"
             recursos_texto += "\n".join([f"  - {r['nombre']}: {r['url']}" for r in items])
 
-        system_instruction = """Eres un asesor virtual de Prepa en Línea-SEP. Redacta una retroalimentación personalizada para la actividad "Mi Historia de Vida" (M2 AI2).
-Usa tono cercano, respetuoso y constructivo. Reconoce el esfuerzo. No uses lenguaje punitivo.
-Sigue EXACTAMENTE esta estructura: 1) Saludo "Hola [Nombre]:"; 2) Apertura (objetivos, netiqueta); 3) Ejercicio 1 – Relato; 4) Ejercicio 2 – Clases de palabras; 5) Ejercicio 3 – Audio/video; 6) Ejercicio 4 – Párrafo oral/escrito; 7) Cumplimiento técnico; 8) Criterio comunicativo (ortografía); 9) Pensamiento crítico; 10) Originalidad (solo si hay deducción); 11) Recursos sugeridos: recomienda VARIOS recursos de la lista proporcionada según cada necesidad a reforzar; 12) Cierre alentador; 13) "Saludos," + firma.
-Escribe en español de México. Extensión aproximada 400-600 palabras. Usa los datos de evaluación para frases específicas. Incluye en la sección de recursos al menos 2-3 enlaces distintos del listado según las áreas que el alumno deba reforzar."""
-
-        user_content = f"""Genera la retroalimentación siguiendo la estructura indicada. Escribe solo la retroalimentación, sin explicaciones adicionales.
-
-Datos de evaluación (JSON):
-{json.dumps(eval_json, ensure_ascii=False, indent=2)}
-
-Fragmento del relato (para personalizar):
-{story_snippet[:800]}
-
-Listado de recursos del Compilado M02 (recomendar varios según la necesidad a reforzar del alumno):
-{recursos_texto}
-"""
+        system_instruction = _retro_system_instruction()
+        user_content = _build_retro_user_content(eval_json, story_snippet, recursos_texto)
 
         # 1) Nuevo SDK Google GenAI (google.genai)
         if self._client_new:
@@ -415,46 +444,39 @@ Listado de recursos del Compilado M02 (recomendar varios según la necesidad a r
 
     def get_prompt_preview(self, evaluation_results, story_snippet, fragmentos=None, student_name="Estudiante", curso="M2", asesor_nombre="Asesor"):
         """
-        Devuelve el texto del prompt (system + user) usado para la retroalimentación.
-        Sigue la plantilla de docs/03_data_AI2/m2_ai2_retroalimentacion.md.
+        Devuelve el mismo system + user que generate_feedback envía a Ollama/Gemini.
+        La guía humana docs/03_data_AI2/m2_ai2_retroalimentacion.md no se inyecta al modelo.
         """
         fragmentos = fragmentos or {}
         eval_json = build_eval_json_for_llm(
             evaluation_results, fragmentos, student_name, curso, asesor_nombre
         )
-        recursos = self.get_suggested_materials(evaluation_results, max_por_area=2, max_total=5)
+        recursos = self.get_suggested_materials(
+            evaluation_results, max_por_area=3, max_total=10
+        )
         por_area = {}
         for r in recursos:
             a = r.get("area", "general")
             por_area.setdefault(a, []).append(r)
-        recursos_texto = ""
-        nombres_area = {"clases_palabras": "Clases de palabras", "ortografia": "Ortografía", "comunicacion_oral_escrita": "Comunicación oral/escrita", "redaccion": "Redacción", "netiqueta": "Netiqueta"}
+        recursos_texto = "Recursos disponibles por área de refuerzo (recomienda varios según la necesidad del alumno):\n"
+        nombres_area = {
+            "clases_palabras": "Clases de palabras / gramática",
+            "ortografia": "Ortografía y puntuación",
+            "comunicacion_oral_escrita": "Comunicación oral y escrita",
+            "redaccion": "Redacción y relato",
+            "netiqueta": "Netiqueta",
+        }
         for area, items in por_area.items():
             etiqueta = nombres_area.get(area, area)
-            recursos_texto += f"\n[{etiqueta}]\n" + "\n".join([f"  - {r['nombre']}: {r['url']}" for r in items])
+            recursos_texto += f"\n[{etiqueta}]\n"
+            recursos_texto += "\n".join([f"  - {r['nombre']}: {r['url']}" for r in items])
 
-        system = (
-            'Eres un asesor virtual de Prepa en Línea-SEP. Redacta una retroalimentación personalizada para la actividad '
-            '"Mi Historia de Vida" (M2 AI2). Usa un tono cercano, respetuoso y constructivo, reconoce el esfuerzo y '
-            'evita el lenguaje punitivo. Sigue exactamente la estructura solicitada en prosa: inicia con un saludo que diga '
-            '"Hola [Nombre]:"; continúa con una apertura que conecte con los objetivos y la netiqueta; después escribe el feedback '
-            'del relato escrito; luego el feedback sobre las clases de palabras; después el feedback sobre el audio o video; después '
-            'incluye el feedback del párrafo de diferencias entre expresión oral y escrita; posteriormente trata el cumplimiento técnico; '
-            'continúa con el criterio comunicativo enfocado en ortografía; sigue con pensamiento crítico; después añade originalidad solo si '
-            'hubo deducción; enseguida recomienda recursos sugeridos de la lista que se proporciona; cierra con un mensaje alentador y '
-            'termina con la despedida "Saludos," y la firma. Referencia completa: docs/03_data_AI2/m2_ai2_retroalimentacion.md '
-            '(mapeo métricas → frases, estructura obligatoria, ejemplos).'
+        system = _retro_system_instruction()
+        user = _build_retro_user_content(eval_json, story_snippet, recursos_texto)
+
+        return (
+            "=== SYSTEM (enviado a Ollama/Gemini) ===\n\n"
+            + system
+            + "\n\n=== USER (con datos de esta evaluación) ===\n\n"
+            + user
         )
-
-        user = f"""Genera la retroalimentación siguiendo la estructura indicada. Escribe solo la retroalimentación.
-
-Datos de evaluación (JSON):
-{json.dumps(eval_json, ensure_ascii=False, indent=2)}
-
-Fragmento del relato:
-{story_snippet[:800]}
-
-Recursos disponibles:
-{recursos_texto}"""
-
-        return "=== SYSTEM (plantilla base) ===\n\n" + system + "\n\n=== USER (con datos de esta evaluación) ===\n\n" + user

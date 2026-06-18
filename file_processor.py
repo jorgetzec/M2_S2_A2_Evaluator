@@ -49,6 +49,7 @@ _ANCHOR_RGB = {
         (0xDC, 0x14, 0x3C), (0xFF, 0x69, 0xB4), (0xFC, 0x0F, 0xC0),  # fuchsia/hot pink
         (0xEA, 0xD1, 0xDC), (0xF4, 0xCC, 0xCC), (0xFF, 0x66, 0xFF),  # pastels adverbs/pinks
         (0xBE, 0x18, 0x5D), (0xDB, 0x27, 0x77),                       # custom pinks
+        (0xFF, 0x00, 0xAA),                                           # Word shading magenta (Oropeza)
     ],
     "DET": [
         (0xA6, 0xA6, 0xA6), (0x7F, 0x7F, 0x7F), (0xBF, 0xBF, 0xBF),  # highlight
@@ -69,6 +70,7 @@ _ANCHOR_RGB = {
         (0xE4, 0xDF, 0xEC), (0xCC, 0xC1, 0xDA), (0x4F, 0x34, 0x62), (0xCC, 0xC0, 0xDA), (0x4A, 0x14, 0x8C),
         (0xAB, 0x47, 0xBC), (0x8E, 0x24, 0xAA), (0x7B, 0x1F, 0xA2),
         (0x7C, 0x3A, 0xED), (0x8B, 0x5C, 0xF6),                       # custom violets
+        (0xCA, 0x00, 0xFF),                                           # Word shading violet (Oropeza)
     ],
 }
 
@@ -137,6 +139,7 @@ def hex_to_category(hex_color):
         'EA3560', 'FC0FC0', 'DC143C', 'FF4081', 'FF80AB',            # hot pinks
         'C0004B', 'EAD1DC', 'F4CCCC', 'FF66FF',                       # dark magenta + GD pinks
         'BE185D', 'DB2777', 'EC4899', 'E11D48',                       # paleta personalizada (rosa)
+        'FF00AA', 'FF0099',                                           # Word shading magenta
     ]: return "ADV"
     # ---- DET: Determinante / Artículo / Pronombre (gris) ----
     if hex_color in [
@@ -154,8 +157,25 @@ def hex_to_category(hex_color):
         'AB47BC', '8E24AA', '7B1FA2',                       # medium purples
         'B4A7D6', 'D9D2E9', '9966FF', '9900FF',             # custom/GD purples
         '7C3AED', '8B5CF6', '6D28D9', '9333EA',           # paleta personalizada (violeta)
+        'CA00FF', 'BF00FF', 'CC00FF',                     # Word shading violet
     ]: return "ADP"
     return None
+
+def _category_from_fill_hex(hex_val, max_distance=0.42):
+    """Hex de sombreado/font → categoría; exact match y luego proximidad RGB."""
+    if not hex_val or str(hex_val).strip().lower() == "auto":
+        return None
+    val_upper = str(hex_val).strip().upper().replace("#", "")
+    if len(val_upper) != 6:
+        return None
+    cat = hex_to_category(val_upper)
+    if cat:
+        return cat
+    r, g, b = int(val_upper[0:2], 16), int(val_upper[2:4], 16), int(val_upper[4:6], 16)
+    if _is_neutral_color(r, g, b):
+        return None
+    cat, _ = rgb_to_category(r, g, b, max_distance=max_distance)
+    return cat
 
 def color_to_category(hex_or_rgb, default_confidence=0.85):
     """
@@ -218,7 +238,7 @@ def get_run_color_category(run):
         if shd:
             fill = shd[0].get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}fill')
             if fill and fill != 'auto':
-                cat = hex_to_category(fill)
+                cat = _category_from_fill_hex(fill)
                 if cat:
                     return cat
     except: pass
@@ -240,8 +260,38 @@ def get_run_color_category(run):
     except: pass
     return None
 
-# Título esperado según actividad M2 AI2
+# Título del relato M2 AI2: forma canónica y variantes aceptables
 TITULO_RELATO_ESPERADO = "el relato de mi historia"
+_TITULO_RELATO_PATTERNS = [
+    re.compile(r"el\s+relato\s+de\s+mi\s+historia"),
+    re.compile(r"relatando\s+mi\s+historia"),
+    re.compile(r"narrando\s+mi\s+historia"),
+    re.compile(r"contando\s+mi\s+historia"),
+    re.compile(r"mi\s+historia\s+de\s+vida"),
+    re.compile(r"el\s+relato\s+de\s+mi\s+vida"),
+    re.compile(r"\brelato\b.*\bmi\s+historia\b"),
+    re.compile(r"\bmi\s+historia\b.*\brelato\b"),
+]
+
+
+def _linea_titulo_relato_aceptable(line):
+    """Una línea corta del encabezado puede ser título válido (no solo la frase exacta)."""
+    if not line or not line.strip():
+        return False
+    line_norm = re.sub(r"\s+", " ", line.strip().lower())
+    if len(line_norm) > 120:
+        return False
+    if TITULO_RELATO_ESPERADO in line_norm:
+        return True
+    for pat in _TITULO_RELATO_PATTERNS:
+        if pat.search(line_norm):
+            return True
+    if re.match(r"^mi\s+historia[.:]?\s*$", line_norm):
+        return True
+    words = line_norm.split()
+    if len(words) <= 6 and re.search(r"\bmi\s+historia\b", line_norm):
+        return True
+    return False
 
 # Colores para vista previa (verbos verde, sustantivos azul, adjetivos amarillo, adverbios rosa, artículos gris, preposiciones morado)
 CATEGORY_CSS = {
@@ -266,11 +316,15 @@ def extract_audio_url_from_text(text):
     return matches[-1] if matches else None
 
 def detect_titulo_presente(text):
-    """Indica si el título 'El relato de mi historia' está presente en el texto."""
+    """Indica si hay título del relato (canónico o variantes: Mi historia, Relatando mi historia, etc.)."""
     if not text:
         return False
-    normalized = re.sub(r'\s+', ' ', text.strip().lower())
-    return TITULO_RELATO_ESPERADO in normalized
+    head_lines = text.strip().split("\n")[:25]
+    for line in head_lines:
+        if _linea_titulo_relato_aceptable(line):
+            return True
+    head_blob = re.sub(r"\s+", " ", "\n".join(head_lines).strip().lower())
+    return TITULO_RELATO_ESPERADO in head_blob
 
 def _check_fuente_arial_12_docx(doc):
     """Comprueba si el documento usa Arial 12pt (muestreo en primeros párrafos)."""
@@ -316,7 +370,7 @@ def _get_run_color_info(run):
         if shd:
             fill = shd[0].get('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}fill')
             if fill and fill != 'auto':
-                cat = hex_to_category(fill)
+                cat = _category_from_fill_hex(fill)
                 if cat:
                     return cat, "docx_shading", fill
     except: pass
@@ -333,11 +387,7 @@ def _get_run_color_info(run):
             if val and val.upper() not in ('AUTO', '000000', 'FFFFFF', ''):
                 val_upper = val.upper().replace('#', '')
                 if len(val_upper) == 6:
-                    cat = hex_to_category(val_upper)
-                    if not cat:
-                        r, g, b = int(val_upper[0:2], 16), int(val_upper[2:4], 16), int(val_upper[4:6], 16)
-                        if not _is_neutral_color(r, g, b):
-                            cat, _ = rgb_to_category(r, g, b, max_distance=0.42)
+                    cat = _category_from_fill_hex(val_upper)
                     if cat:
                         return cat, "docx_font_color", val_upper
     except: pass
