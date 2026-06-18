@@ -1,134 +1,117 @@
-# Evaluador M2 AI2 – Mi Historia de Vida
+# Evaluador M2 AI2
 
-Aplicación **Streamlit** para automatizar la evaluación de la Actividad Integradora 2 del Módulo 2 (Prepa en Línea-SEP). Sustituye el flujo anterior en n8n por una interfaz con GUI que permite subir entregas en varios formatos, segmentar el documento, aplicar la rúbrica y generar retroalimentación con IA.
+Aplicación **Streamlit** para asistir la evaluación de la actividad integradora **M2 AI2**. Permite subir entregas en varios formatos, segmentar el documento, aplicar la rúbrica y generar retroalimentación con IA (Gemini u Ollama).
 
 ## Requisitos
 
 - **Python 3.10+**
-- **Tesseract OCR** (para imágenes) y **FFmpeg** (para video/audio), si se usan esos formatos
-- **Gemini API Key** (opcional, solo para generar retroalimentación con IA)
-- **Ollama** (opcional, solo para generar retroalimentación sin Gemini)
+- **Tesseract OCR** (imágenes) y **FFmpeg** (video/audio), si usas esos formatos
+- **Gemini API Key** (opcional, para retroalimentación con IA en la nube)
+- **Ollama** (opcional, retroalimentación local sin Gemini)
 
 ## Ollama (opcional)
-Si quieres que la retroalimentación se genere con un modelo local (sin Gemini), instala y ejecuta Ollama:
 
 ```bash
-# Inicia el servidor
 ollama serve
-
-# Descarga un modelo (ejemplo)
 ollama pull mistral
-
-# Lista modelos disponibles
 ollama list
 ```
 
-Cuando uses la app dentro de Docker, el contenedor debe poder llegar al puerto de Ollama.
-En Windows normalmente usa `http://host.docker.internal:11434`.
+En Docker, el contenedor debe alcanzar Ollama en el host. En Windows suele ser `http://host.docker.internal:11434`.
 
 ## Inicio rápido
 
-### 1. Clonar o abrir el proyecto
+### Entorno local
 
 ```bash
-cd "D:\CODE\Code3_Coding and Data\20260318_M02S1AI2_app_evaluador"
-```
-
-### 2. Entorno virtual (recomendado)
-
-```bash
+cd <ruta-del-proyecto>
 python -m venv venv
-venv\Scripts\activate
-```
-
-### 3. Instalar dependencias
-
-```bash
+venv\Scripts\activate          # Windows
+# source venv/bin/activate     # Linux/macOS
 pip install -r requirements.txt
 python -m spacy download es_core_news_sm
-```
-
-### 4. Ejecutar la aplicación
-
-```bash
 streamlit run app.py
 ```
 
-Se abrirá en el navegador en `http://localhost:8501`.
+La app se abre en `http://localhost:8501`.
 
----
-
-## Uso con Docker
-
-Si prefieres no instalar Python ni Tesseract/FFmpeg en tu máquina:
+### Docker
 
 ```bash
-# Primera vez (construir la imagen y levantar en primer plano: menú de streamlit)
-docker compose up --build
-
-# Primera vez (construir la imagen y levantar en segundo plano)
+# Construir y levantar en segundo plano
 docker compose up --build -d
-```
 
-### Comandos útiles
-```bash
 # Ver logs
 docker compose logs -f evaluador_app
 
-# Parar contenedores sin borrarlos
+# Detener
 docker compose stop
-
-# Borrar contenedores, red y volúmenes (si aplica)
 docker compose down
 ```
 
-### ¿Por qué parece que la terminal se “queda en un menú”?
-Cuando ejecutas `docker compose up --build` **sin** `-d`, Docker se queda en **primer plano** mostrando logs/eventos, y por eso no puedes escribir otros comandos en esa misma terminal (es normal).
+Si ejecutas `docker compose up --build` **sin** `-d`, la terminal queda mostrando logs (es normal). Usa `-d` y consulta logs con `docker compose logs -f`.
 
-Solución: usa `-d` (como `docker compose up --build -d`) y consulta logs con `docker compose logs -f ...`.
-
-La app quedará en `http://localhost:8501`. El volumen montado (`.:/app`) permite que los cambios en el código se reflejen al recargar.
-
----
+Con el volumen `.:/app`, los cambios en código se reflejan al recargar la página.
 
 ## Configuración
 
-- **Gemini API Key**: En la barra lateral de la app, introduce tu API Key de Google Gemini para poder generar la retroalimentación automática. Si está vacía, la app puede usar **Ollama** (si está configurado).
-- **Compilado de recursos**: La app usa el CSV `Compilado M02_RED_DSAyDC.csv` para recomendar recursos por área de mejora (clases de palabras, ortografía, comunicación oral/escrita, etc.). Busca el archivo en:
-  - raíz del proyecto: `Compilado M02_RED_DSAyDC.csv`
-  - o en `docs/01_guias/Compilado M02_RED_DSAyDC.csv`
+| Opción | Dónde | Descripción |
+|--------|--------|-------------|
+| Gemini API Key | Barra lateral de la app | Retroalimentación con Gemini. Alternativa: Ollama. |
+| `GEMINI_API_KEY` | Variable de entorno | Misma clave, sin pegarla en la UI. |
+| Ollama URL | Barra lateral | Por defecto en Docker: `http://host.docker.internal:11434` |
+| `OLLAMA_URL`, `OLLAMA_MODEL` | Variables de entorno | URL y modelo (por defecto `mistral`). |
+| Compilado de recursos | CSV en el proyecto | `Compilado M02_RED_DSAyDC.csv` (raíz o `docs/01_guias/`). |
 
-- **Ollama URL y modelo (opcional)**: Si vas a generar la retro sin Gemini, configura en la barra lateral:
-  - `Ollama URL`: en Docker normalmente `http://host.docker.internal:11434`
-  - `Modelo Ollama`: por defecto `mistral`
+No subas claves ni `.env` al repositorio; usa `.gitignore` y variables de entorno.
 
 ## Flujo de trabajo
 
 1. **Subir archivo**: DOCX, PDF, PPTX, imagen (PNG/JPG), video (MP4) o audio (MP3/WAV).
-2. **Revisar extracción**: Vista previa del texto y, si aplica, detección de título, fuente y enlace al audio.
-3. **Segmentar**: Indicar qué parte es el relato (Ejercicio 1), el párrafo de reflexión (Ejercicio 4) y corregir el enlace al audio (Ejercicio 3) si hace falta.
-4. **Ejecutar análisis**: Conteo de palabras, clases de palabras (colores en Word), ortografía (LanguageTool), transcripción de audio (Whisper), similitud texto/audio, indicadores de IA.
-5. **Generar evaluación**: Se aplica la rúbrica M2 AI2 (cognitivo, actitudinal, comunicativo, pensamiento crítico, originalidad).
-6. **Generar retroalimentación**: Con Gemini se genera un texto siguiendo la plantilla oficial; se recomiendan **varios recursos** del Compilado según lo que el alumno deba reforzar.
-7. **Descargar**: JSON o TOON con el resultado completo.
+2. **Vista previa y segmentación**: Relato (ej. 1), reflexión (ej. 4), enlace al audio (ej. 3).
+3. **Ejecutar análisis**: Palabras, clases de palabras (sombreado en DOCX/PDF/PPTX/imagen/video), ortografía (LanguageTool), transcripción (Whisper), similitud relato/audio.
+4. **Generar evaluación**: Rúbrica (cognitivo, actitudinal, comunicativo, pensamiento crítico, originalidad).
+5. **Retroalimentación**: Texto según plantilla + recursos del compilado.
+6. **Exportar**: JSON con métricas, fragmentos, indicadores y retro.
+
+### Audio desde enlaces en la nube
+
+La app intenta descargar y transcribir desde:
+
+- **Google Drive** (`gdown` o descarga directa)
+- **Dropbox** (`?dl=1`)
+- **OneDrive / 1drv.ms** (token Badger + API Microsoft)
+- **SharePoint** (`?download=1`)
+
+**OneDrive**
+
+1. Compartir como **«Cualquier persona con el vínculo»** (sin exigir inicio de sesión).
+2. Preferir el enlace corto `https://1drv.ms/...` (incluye formatos `/u/s!...` y `/u/c/...`).
+3. Prueba:
+
+```bash
+docker compose exec evaluador_app python scratch/test_onedrive.py "https://1drv.ms/..."
+```
+
+La transcripción de audios largos puede tardar varios minutos.
 
 ## Estructura del proyecto
 
 ```
 ├── app.py                 # Interfaz Streamlit
-├── file_processor.py      # Extracción de texto (Word, PDF, PPTX, imagen, audio/video)
-├── analysis_engine.py     # Métricas (palabras, ortografía, highlights, Whisper, similitud)
-├── evaluator.py           # Rúbrica M2 AI2 y export JSON/TOON
-├── feedback_generator.py  # Retroalimentación con Gemini y recursos del CSV
+├── file_processor.py      # Texto, resaltados y segmentación
+├── analysis_engine.py     # Métricas, Whisper, descarga de audio por URL
+├── evaluator.py           # Rúbrica y export JSON
+├── feedback_generator.py  # Retroalimentación (Gemini / Ollama)
 ├── requirements.txt
 ├── Dockerfile
 ├── docker-compose.yml
-├── Compilado M02_RED_DSAyDC.csv   # Recursos recomendados por área
+├── scratch/               # Scripts de prueba (no datos de alumnos)
 └── docs/
     ├── 01_guias/
     ├── 02_bitacoras/
-    ├── 03_data_AI2/       # Rúbrica, métricas, plantilla de retroalimentación
-    └── 04_old_version/    # Scripts antiguos (n8n / processor v4)
+    ├── 03_data_AI2/       # Rúbrica, métricas, plantilla de retro
+    └── 04_old_version/    # Referencia de implementaciones anteriores
 ```
 
 ## Documentación de referencia
@@ -139,4 +122,4 @@ La app quedará en `http://localhost:8501`. El volumen montado (`.:/app`) permit
 
 ## Licencia
 
-Uso interno / educativo Prepa en Línea-SEP.
+Uso interno y educativo.

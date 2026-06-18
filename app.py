@@ -17,7 +17,7 @@ except ImportError:
         matches = url_pattern.findall(text)
         audio_url = None
         for u in reversed(matches):
-            if any(x in u.lower() for x in ('drive', 'dropbox', 'youtu', 'soundcloud', 'mp3', 'mp4')):
+            if any(x in u.lower() for x in ('drive', 'dropbox', 'onedrive', '1drv', 'sharepoint', 'youtu', 'soundcloud', 'mp3', 'mp4')):
                 audio_url = u.rstrip('.,;:)')
                 break
         if not audio_url and matches:
@@ -307,7 +307,14 @@ if st.session_state.processed_data:
     st.markdown(f'<div class="section-title">{_svg_icon("analyze")}Análisis automático</div>', unsafe_allow_html=True)
 
     if st.button("Ejecutar análisis"):
-        with st.spinner("Procesando métricas..."):
+        _spin_msg = "Procesando métricas..."
+        if audio_url and not data.get("audio_path") and any(
+            x in (audio_url or "").lower() for x in ("1drv", "onedrive", "sharepoint")
+        ):
+            _spin_msg = (
+                "Descargando audio de OneDrive y transcribiendo (puede tardar varios minutos)..."
+            )
+        with st.spinner(_spin_msg):
             story_words = count_words(story_text)
             refl_words = count_words(refl_text)
             refl_lines = max(1, refl_words // 12)
@@ -328,8 +335,10 @@ if st.session_state.processed_data:
             trans_error = None
             if data.get("audio_path"):
                 trans_text, trans_duration = transcribe_audio(data["audio_path"])
-            elif audio_url:
-                trans_text, trans_duration, trans_error = transcribe_audio_url(audio_url)
+            elif (audio_url or "").strip():
+                trans_text, trans_duration, trans_error = transcribe_audio_url(
+                    (audio_url or "").strip()
+                )
 
             ai_info = detect_ai_indicators(story_text)
             sim_info = analyze_story_vs_transcription(story_text, trans_text)

@@ -533,3 +533,18 @@ Como se cambió requirements.txt y el Dockerfile instala desde ese archivo, nece
 - **Filtrado por segmento "relato"**: Antes de llamar a `validate_highlights`, se filtran los highlights dejando solo los cuyas palabras existen en el texto del relato segmentado. Evita evaluar highlights de secciones como reflexión, enlaces o notas al pie.
 - **Visor JSON**: Se reemplazó `st.code(json_data)` por un `<div class="mono-box"><pre>` con `white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word;` para garantizar wrap visible en cualquier ancho de ventana.
 - **Caption actualizado**: La leyenda del Ejercicio 2 ahora dice "se detectan por sombreado/fondo de color en Word, PDF, PPTX o imagen".
+
+---
+## 2026-05-18 - Descarga de audio OneDrive (token Badger)
+
+**Files**: `analysis_engine.py`, `scratch/test_onedrive.py`, `README.md`  
+**Objective**: Restaurar descarga de audio desde enlaces OneDrive/1drv.ms; la API `api.onedrive.com/v1.0/shares/.../content` ya no funciona sin autenticación (401).
+
+### Cambios
+- Se eliminó `_onedrive_direct_url` (API antigua sin auth).
+- Nuevo flujo Badger (2025): POST token en `api-badgerp.svc.ms`, luego POST a `my.microsoftpersonalcontent.com/_api/v2.0/shares/u!{encoded}/driveitem` con header `Authorization: Badger {token}` y `Prefer: autoredeem`; se obtiene `@content.downloadUrl`.
+- Codificación de URL según Microsoft: `base64` estándar → quitar `=` → reemplazar `/` y `+` → prefijo `u!` en la ruta.
+- Resolución de enlaces cortos `1drv.ms` con GET (redirect).
+- Fallbacks: SharePoint `?download=1`, URLs legacy (`redir`, `download`, `download.aspx`).
+- Detección de redirect a `login.live.com` con mensaje claro de permisos.
+- `scratch/test_onedrive.py` y sección en `README.md` para probar enlaces públicos (preferir `1drv.ms`).

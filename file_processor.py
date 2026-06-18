@@ -249,7 +249,7 @@ def extract_audio_url_from_text(text):
     matches = url_pattern.findall(text.strip())
     for url in reversed(matches):
         u = url.rstrip('.,;:)')
-        if any(x in u.lower() for x in ('drive', 'dropbox', 'onedrive', 'youtu', 'soundcloud', 'audio', 'video', 'mp3', 'mp4', 'watch', 'sharing')):
+        if any(x in u.lower() for x in ('drive', 'dropbox', 'onedrive', '1drv', 'sharepoint', 'youtu', 'soundcloud', 'audio', 'video', 'mp3', 'mp4', 'watch', 'sharing')):
             return u
     return matches[-1] if matches else None
 

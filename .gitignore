@@ -1,0 +1,77 @@
+# Entornos y dependencias locales
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Secretos y configuración local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+**/secrets/
+.streamlit/secrets.toml
+
+# API keys y tokens (archivos sueltos)
+*api_key*
+*API_KEY*
+*.token
+
+# Datos de alumnos / evaluaciones generadas (no subir entregas reales)
+evaluacion_m2_ai2.json
+evaluacion_*.json
+**/entregas/
+**/submissions/
+scratch/audio_descargado*
+scratch/*.wav
+scratch/*.mp3
+scratch/*.m4a
+scratch/onedrive_page.html
+
+# Documentación local, bitácoras y entregas de prueba (no necesarios para ejecutar la app)
+docs/
+
+# Scripts de depuración y pruebas (no necesarios para Streamlit)
+scratch/
+
+# Modelos y cachés de ML
+.cache/
+.huggingface/
+models/
+*.pt
+*.onnx
+
+# Temporales de audio/video
+*.tmp
+temp/
+tmp/
+audio_descargado*
+
+# IDE, Cursor y herramientas locales
+.cursor/
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Docker (overrides locales)
+docker-compose.override.yml

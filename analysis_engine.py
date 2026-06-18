@@ -246,9 +246,231 @@ def _dropbox_direct_url(url):
     return url + "?dl=1" if "?" not in url else url
 
 
+# OneDrive: la API pública api.onedrive.com/shares/.../content ya no funciona sin auth (401).
+# Flujo actual (2025): token Badger + API personal content (ver eugenenuke/onedrive-downloader).
+_ONEDRIVE_BADGER_APP_ID = "5cbed6ac-a083-4e14-b191-b4ba07653de2"
+_ONEDRIVE_BADGER_TOKEN_URL = "https://api-badgerp.svc.ms/v1.0/token"
+_ONEDRIVE_PERSONAL_API = "https://my.microsoftpersonalcontent.com/_api/v2.0"
+_BROWSER_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
+}
+
+
+def _is_onedrive_url(url):
+    """Detecta si la URL pertenece a OneDrive / SharePoint / 1drv.ms."""
+    low = url.lower()
+    return any(domain in low for domain in (
+        "1drv.ms",
+        "onedrive.live.com",
+        "onedrive.com",
+        "sharepoint.com",
+    ))
+
+
+def _encode_onedrive_sharing_url(url: str) -> str:
+    """Codifica URL de compartir según documentación de Microsoft Graph shares."""
+    import base64
+    b64 = base64.b64encode(url.strip().encode("utf-8")).decode("ascii")
+    return b64.rstrip("=").replace("/", "_").replace("+", "-")
+
+
+def _get_onedrive_badger_token():
+    r = requests.post(
+        _ONEDRIVE_BADGER_TOKEN_URL,
+        json={"appId": _ONEDRIVE_BADGER_APP_ID},
+        headers={"Content-Type": "application/json"},
+        timeout=30,
+    )
+    r.raise_for_status()
+    data = r.json()
+    token = data.get("token")
+    if not token:
+        raise ValueError("Respuesta Badger sin token")
+    return token
+
+
+def _resolve_onedrive_sharing_url(url: str) -> str:
+    """Resuelve 1drv.ms a la URL larga de compartir (si el redirect no pide login)."""
+    resolved = url.strip()
+    if "1drv.ms" not in resolved.lower():
+        return resolved
+    try:
+        r = requests.get(
+            resolved, headers=_BROWSER_HEADERS, allow_redirects=True, timeout=20,
+        )
+        final = r.url
+        if "login.live.com" in final or "login.microsoftonline.com" in final:
+            return resolved
+        return final
+    except Exception:
+        return resolved
+
+
+def _onedrive_badger_resolve(sharing_url: str, badger_token=None):
+    """
+    Obtiene URL de descarga directa vía token Badger + API personal content.
+    Retorna (download_url, badger_token, error_message).
+    """
+    try:
+        token = badger_token or _get_onedrive_badger_token()
+    except Exception as e:
+        return None, None, f"No se pudo autenticar con OneDrive (Badger): {e}"
+
+    encoded = _encode_onedrive_sharing_url(sharing_url)
+    api = (
+        f"{_ONEDRIVE_PERSONAL_API}/shares/u!{encoded}/driveitem"
+        "?select=@content.downloadUrl,id,name"
+    )
+    try:
+        r = requests.post(
+            api,
+            data="",
+            headers={
+                "Accept": "application/json",
+                "Prefer": "autoredeem",
+                "Authorization": f"Badger {token}",
+            },
+            timeout=30,
+        )
+    except Exception as e:
+        return None, token, str(e)
+
+    if r.status_code == 404:
+        return None, token, (
+            "Enlace de OneDrive no encontrado o no accesible públicamente. "
+            "Configura el archivo como «Cualquier persona con el vínculo puede ver» "
+            "y usa el enlace corto 1drv.ms si es posible."
+        )
+    if not r.ok:
+        return None, token, f"API OneDrive respondió {r.status_code}: {r.text[:200]}"
+
+    try:
+        data = r.json()
+    except Exception:
+        return None, token, "Respuesta inválida de la API de OneDrive"
+
+    dl = data.get("@content.downloadUrl")
+    if not dl and isinstance(data.get("content"), dict):
+        dl = data["content"].get("downloadUrl")
+    if dl:
+        return dl, token, None
+    return None, token, "La API de OneDrive no devolvió URL de descarga para este enlace."
+
+
+def _onedrive_badger_download_url(sharing_url: str):
+    """Compat: retorna (download_url, error_message)."""
+    dl, _, err = _onedrive_badger_resolve(sharing_url)
+    return dl, err
+
+
+def _onedrive_legacy_download_candidates(url: str):
+    """URLs legacy (redir/download) a partir de parámetros resid/authkey/cid."""
+    from urllib.parse import urlparse, parse_qs, quote
+    qs = parse_qs(urlparse(url).query)
+    resid = (qs.get("resid") or qs.get("id") or [""])[0]
+    if not resid:
+        return []
+    authkey = (qs.get("authkey") or qs.get("authKey") or qs.get("e") or [""])[0]
+    cid = (qs.get("cid") or [""])[0]
+    resid_q = quote(resid, safe="!")
+    auth_q = quote(authkey, safe="") if authkey else ""
+    candidates = []
+    if auth_q:
+        candidates.append(
+            f"https://onedrive.live.com/redir?resid={resid_q}&authKey={auth_q}"
+        )
+        candidates.append(
+            f"https://onedrive.live.com/download?resid={resid_q}&authKey={auth_q}"
+        )
+    candidates.append(f"https://onedrive.live.com/download?resid={resid_q}")
+    if cid:
+        candidates.append(
+            f"https://onedrive.live.com/download.aspx?cid={quote(cid)}&resid={resid_q}"
+            + (f"&authkey={auth_q}" if auth_q else "")
+        )
+    dl = url.strip()
+    if "?" in dl:
+        candidates.append(dl + "&download=1")
+    else:
+        candidates.append(dl + "?download=1")
+    return candidates
+
+
+def _sharepoint_direct_download_url(url: str) -> str:
+    """Añade download=1 a enlaces de SharePoint/OneDrive empresarial."""
+    u = url.strip()
+    if "download=1" in u.lower():
+        return u
+    return f"{u}&download=1" if "?" in u else f"{u}?download=1"
+
+
+def _download_with_content_validation(url, out_base, headers, label="enlace", timeout=60):
+    """
+    Helper genérico: descarga un archivo desde `url`, valida que no sea HTML,
+    e intenta inferir la extensión desde Content-Disposition.
+    Retorna (ruta_local, error).
+    """
+    r = requests.get(url, timeout=timeout, stream=True, headers=headers, allow_redirects=True)
+    r.raise_for_status()
+
+    final_url = (r.url or "").lower()
+    if "login.live.com" in final_url or "login.microsoftonline.com" in final_url:
+        return None, (
+            f"El {label} redirige a inicio de sesión de Microsoft. "
+            "El archivo debe estar compartido como «Cualquier persona con el vínculo»."
+        )
+
+    # Inferir extensión desde Content-Disposition o Content-Type
+    ext = ".mp3"
+    disp = r.headers.get("content-disposition", "")
+    if "filename" in disp:
+        import re as _re
+        m = _re.findall(r"filename\*?=[\"']?([^\"';]+)", disp)
+        if m:
+            ext_guess = os.path.splitext(m[-1])[1]
+            if ext_guess:
+                ext = ext_guess
+    else:
+        ct = (r.headers.get("content-type") or "").lower()
+        if "audio/mp4" in ct or "audio/m4a" in ct:
+            ext = ".m4a"
+        elif "audio/wav" in ct or "audio/x-wav" in ct:
+            ext = ".wav"
+        elif "video/mp4" in ct:
+            ext = ".mp4"
+        elif "audio/ogg" in ct:
+            ext = ".ogg"
+
+    out_path = out_base + ext
+    with open(out_path, "wb") as f:
+        for chunk in r.iter_content(8192):
+            f.write(chunk)
+
+    # Validar que no sea HTML (página de vista previa en vez de audio)
+    try:
+        with open(out_path, "rb") as f:
+            head = f.read(512)
+        if b"<!DOCTYPE" in head or b"<html" in head[:256].lower():
+            os.remove(out_path)
+            return None, (
+                f"El {label} devolvió una página web en vez del archivo de audio. "
+                "Verifica que el enlace sea público y permita descarga directa."
+            )
+    except Exception:
+        pass
+
+    return out_path, None
+
+
 def download_audio_from_url(audio_url, dest_dir=None):
     """
     Descarga audio desde enlaces comunes y devuelve (ruta_local, error).
+    Soporta: Google Drive, Dropbox, OneDrive/SharePoint, y URLs directas.
     Inspirado en docs/04_old_version/audio_transcribe.py.
     """
     if not audio_url or not str(audio_url).strip():
@@ -320,24 +542,89 @@ def download_audio_from_url(audio_url, dest_dir=None):
                 f.write(chunk)
         return out_path, None
 
-    # OneDrive / URLs directas
-    headers = {"User-Agent": "Mozilla/5.0"}
-    r = requests.get(url, timeout=60, stream=True, headers=headers, allow_redirects=True)
-    r.raise_for_status()
-    ext = ".mp3"
-    disp = r.headers.get("content-disposition", "")
-    if "filename" in disp:
-        import re as _re
-        m = _re.findall(r"filename\*?=[\"']?([^\"';]+)", disp)
-        if m:
-            ext_guess = os.path.splitext(m[-1])[1]
-            if ext_guess:
-                ext = ext_guess
-    out_path = out_base + ext
-    with open(out_path, "wb") as f:
-        for chunk in r.iter_content(8192):
-            f.write(chunk)
-    return out_path, None
+    # OneDrive / SharePoint / 1drv.ms
+    if _is_onedrive_url(url):
+        sharing_url = _resolve_onedrive_sharing_url(url)
+        last_err = None
+        badger_token = None
+
+        # 1) API Badger (método vigente; soporta 1drv.ms/u/s! y 1drv.ms/u/c/...)
+        try:
+            badger_token = _get_onedrive_badger_token()
+        except Exception as e:
+            last_err = f"No se pudo autenticar con OneDrive (Badger): {e}"
+
+        if badger_token:
+            for candidate_url in (url.strip(), sharing_url):
+                if not candidate_url:
+                    continue
+                dl_url, _, badger_err = _onedrive_badger_resolve(
+                    candidate_url, badger_token=badger_token,
+                )
+                if badger_err:
+                    last_err = badger_err
+                if dl_url:
+                    headers = dict(_BROWSER_HEADERS)
+                    headers["Authorization"] = f"Badger {badger_token}"
+                    try:
+                        path, err = _download_with_content_validation(
+                            dl_url, out_base, headers,
+                            label="enlace de OneDrive (Badger)",
+                            timeout=180,
+                        )
+                        if path:
+                            return path, None
+                        last_err = err
+                    except Exception as e:
+                        last_err = str(e)
+
+        # 2) SharePoint: ?download=1
+        if "sharepoint.com" in url.lower():
+            try:
+                sp_url = _sharepoint_direct_download_url(url)
+                path, err = _download_with_content_validation(
+                    sp_url, out_base, dict(_BROWSER_HEADERS), label="enlace de SharePoint",
+                )
+                if path:
+                    return path, None
+                last_err = err
+            except Exception as e:
+                last_err = str(e)
+
+        # 3) URLs legacy (redir, download.aspx, download=1)
+        seen = set()
+        for legacy_url in _onedrive_legacy_download_candidates(url):
+            if legacy_url in seen:
+                continue
+            seen.add(legacy_url)
+            try:
+                path, err = _download_with_content_validation(
+                    legacy_url, out_base, dict(_BROWSER_HEADERS), label="enlace de OneDrive (legacy)",
+                )
+                if path:
+                    return path, None
+                if err:
+                    last_err = err
+            except Exception as e:
+                last_err = str(e)
+
+        return None, _perm_hint(
+            last_err or (
+                "No se pudo descargar el audio de OneDrive. "
+                "Verifica que el enlace sea público («Cualquier persona con el vínculo») "
+                "y, si puedes, comparte el enlace corto 1drv.ms del archivo de audio."
+            )
+        )
+
+    # URLs directas (genérico)
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        path, err = _download_with_content_validation(url, out_base, headers, label="enlace")
+        if path:
+            return path, None
+        return None, _perm_hint(err or "No se pudo descargar el archivo")
+    except Exception as e:
+        return None, _perm_hint(str(e))
 
 
 def transcribe_audio_url(audio_url, model_size="base"):
