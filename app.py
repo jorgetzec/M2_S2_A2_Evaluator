@@ -37,6 +37,7 @@ from analysis_engine import (
     detect_ai_indicators,
     validate_highlights,
     build_fragmentos_retro,
+    nlp_available,
 )
 from evaluator import Evaluator, NIVELES
 from feedback_generator import FeedbackGenerator, build_eval_json_for_llm
@@ -315,6 +316,11 @@ if st.session_state.processed_data:
                 "Descargando audio de OneDrive y transcribiendo (puede tardar varios minutos)..."
             )
         with st.spinner(_spin_msg):
+            if not nlp_available():
+                st.warning(
+                    "spaCy no está disponible (modelo es_core_news_sm). "
+                    "Las clases de palabras usan heurísticas limitadas; instala el modelo o reconstruye Docker."
+                )
             story_words = count_words(story_text)
             refl_words = count_words(refl_text)
             refl_lines = max(1, refl_words // 12)

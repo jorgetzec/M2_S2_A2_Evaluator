@@ -12,6 +12,19 @@ try:
 except:
     nlp = None
 
+def _clean_word_token(text):
+    """Normaliza token: quita espacios invisibles y puntuación para NLP/heurísticas."""
+    if not text:
+        return ""
+    t = str(text).strip()
+    t = re.sub(r"[\u200b\u200c\u200d\ufeff]", "", t)
+    return re.sub(r"[^\wáéíóúÁÉÍÓÚñÑ]", "", t, flags=re.UNICODE)
+
+
+def nlp_available():
+    return nlp is not None
+
+
 def _word_looks_like_verb(word):
     """
     Heurística para casos donde spaCy suele etiquetar mal como PROPN, NOUN o DET
@@ -30,13 +43,16 @@ def _word_looks_like_verb(word):
         
     # Terminaciones verbales típicas (Pretérito, Imperfecto, Presente 1ra pers)
     verb_endings = (
+        "ar", "er", "ir",  # infinitivos (llegar, haber, vivir)
         "í", "é", "ó", "aste", "iste", "uyó", "uieron",
         "aba", "abas", "abamos", "aban",
         "ía", "ías", "íamos", "ían",
         "iremos", "eremos", "aremos",
-        "ré", "rás", "rá", "rem", "rán"
+        "ré", "rás", "rá", "rem", "rán",
     )
-    return low.endswith(verb_endings)
+    if low in ("ir", "ser", "ver", "dar"):
+        return True
+    return any(low.endswith(e) for e in verb_endings)
 
 def _lemma_looks_verb(lemma: str) -> bool:
     """Heurística simple: infinitivos (-ar/-er/-ir)."""
@@ -111,7 +127,9 @@ def validate_highlights(highlights):
         "PREPOSICIÓN": "ADP",
     }
     for h in highlights:
-        word = str(h["word"]).strip()
+        word = _clean_word_token(str(h["word"]).strip())
+        if not word:
+            continue
         # Ignorar números puros (no son clases de palabras evaluables en esta rúbrica)
         if word.isdigit():
             continue
@@ -121,10 +139,9 @@ def validate_highlights(highlights):
         pos = get_word_class(word)
 
         token_lemma = None
-        if nlp and word and isinstance(word, str):
+        if nlp and word:
             try:
-                clean = re.sub(r"[^\w\s]", "", word).strip()
-                doc = nlp(clean) if clean else None
+                doc = nlp(word)
                 if doc and len(doc) > 0:
                     token_lemma = doc[0].lemma_
             except Exception:
@@ -137,8 +154,12 @@ def validate_highlights(highlights):
             pos_lower = get_word_class(word.lower())
             if pos_lower in ("AUX", "VERB"):
                 pos = pos_lower
-            # Si aún no es VERB pero "parece" verbo (ej: "veo", "crecí"), lo aceptamos.
-            elif _lemma_looks_verb(token_lemma) or _word_looks_like_verb(word):
+            # Infinitivos y verbos sin contexto (ej. "llegar") o sin spaCy cargado.
+            elif (
+                _lemma_looks_verb(token_lemma)
+                or _lemma_looks_verb(word)
+                or _word_looks_like_verb(word)
+            ):
                 pos = "VERB"
 
         # Ajuste: evitar falsos VERB para sustantivos comunes (p. ej. "niñez").
@@ -174,14 +195,22 @@ def validate_highlights(highlights):
     }
 
 def get_word_class(text):
-    if not nlp or not text.strip():
-        return "Unknown"
-    clean_text = re.sub(r'[^\w\s]', '', text)
+    clean_text = _clean_word_token(text)
     if not clean_text:
-        return "Punct"
-    doc = nlp(clean_text)
-    if len(doc) > 0:
-        return doc[0].pos_
+        return "Unknown"
+    if nlp:
+        try:
+            doc = nlp(clean_text)
+            if len(doc) > 0:
+                return doc[0].pos_
+        except Exception:
+            pass
+    # Respaldo sin spaCy o si el modelo no etiquetó el token aislado
+    low = clean_text.lower()
+    if _lemma_looks_verb(low) or _word_looks_like_verb(low):
+        return "VERB"
+    if _word_looks_like_noun(low):
+        return "NOUN"
     return "Unknown"
 
 def count_words(text):
