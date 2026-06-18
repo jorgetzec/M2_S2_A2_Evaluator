@@ -26,6 +26,7 @@ _ANCHOR_RGB = {
         (0x92, 0xD0, 0x50), (0x00, 0xFF, 0x00), (0x00, 0xB0, 0x50),  # highlight
         (0x70, 0xAD, 0x47), (0x54, 0x82, 0x35), (0x00, 0x99, 0x00),  # font greens
         (0xD9, 0xEA, 0xD3), (0xB6, 0xD7, 0xA8), (0x93, 0xC4, 0x7D),  # google docs/pastel greens
+        (0x1F, 0x7A, 0x1F), (0x15, 0x80, 0x3D),                       # custom dark greens
     ],
     "NOUN": [
         (0x00, 0x70, 0xC0), (0x00, 0xB0, 0xF0), (0x4F, 0x81, 0xBD),  # highlight
@@ -34,17 +35,20 @@ _ANCHOR_RGB = {
         (0xC9, 0xDA, 0xF8), (0x9F, 0xC5, 0xE8), (0xD0, 0xE0, 0xE3),  # pastels nouns/blues
         (0x6D, 0x9E, 0xEB), (0xA4, 0xC2, 0xF4), (0x6F, 0xA8, 0xDC), (0x3C, 0x78, 0xD8), # GD blues
         (0x4A, 0x86, 0xE8), # Cristofer blue
+        (0x1A, 0x56, 0xDB), (0x25, 0x63, 0xEB),                       # custom blues
     ],
     "ADJ": [
         (0xFF, 0xFF, 0x00), (0xFF, 0xC0, 0x00), (0xFF, 0xD9, 0x66),  # highlight
         (0xED, 0x7D, 0x31), (0xFF, 0x99, 0x00), (0xFF, 0x80, 0x00),  # font oranges
         (0xFF, 0xF2, 0xCC), (0xFC, 0xE5, 0xCD),                       # pastels adjectives
+        (0xB4, 0x53, 0x09), (0xD9, 0x77, 0x06),                       # custom oranges
     ],
     "ADV": [
         (0xFF, 0x00, 0xFF), (0xE2, 0x6B, 0x0A), (0xFF, 0x00, 0x66),  # highlight
         (0xFF, 0x00, 0x00), (0xC0, 0x00, 0x00), (0xFF, 0x14, 0x93),  # reds/pinks
         (0xDC, 0x14, 0x3C), (0xFF, 0x69, 0xB4), (0xFC, 0x0F, 0xC0),  # fuchsia/hot pink
         (0xEA, 0xD1, 0xDC), (0xF4, 0xCC, 0xCC), (0xFF, 0x66, 0xFF),  # pastels adverbs/pinks
+        (0xBE, 0x18, 0x5D), (0xDB, 0x27, 0x77),                       # custom pinks
     ],
     "DET": [
         (0xA6, 0xA6, 0xA6), (0x7F, 0x7F, 0x7F), (0xBF, 0xBF, 0xBF),  # highlight
@@ -54,6 +58,7 @@ _ANCHOR_RGB = {
         (0xF2, 0xF2, 0xF2), (0x26, 0x26, 0x26), (0x66, 0x66, 0x66), (0xAE, 0xAA, 0xAA), (0xD6, 0xDC, 0xE4),
         (0xBD, 0xDB, 0xDB), (0x9E, 0x9E, 0x9E), (0xB0, 0xB0, 0xB0),
         (0xBD, 0xDB, 0xDB), (0x9E, 0x9E, 0x9E), (0xB0, 0xB0, 0xB0), (0xCC, 0xCC, 0xCC), (0xD9, 0xD9, 0xD9),
+        (0x6B, 0x72, 0x80), (0x4B, 0x55, 0x63),                       # custom grays
     ],
     "ADP": [
         (0x70, 0x30, 0xA0), (0x60, 0x49, 0x7A), (0xB1, 0xA0, 0xC7),  # highlight
@@ -63,6 +68,7 @@ _ANCHOR_RGB = {
         (0x99, 0x00, 0xFF), # Cristofer purple
         (0xE4, 0xDF, 0xEC), (0xCC, 0xC1, 0xDA), (0x4F, 0x34, 0x62), (0xCC, 0xC0, 0xDA), (0x4A, 0x14, 0x8C),
         (0xAB, 0x47, 0xBC), (0x8E, 0x24, 0xAA), (0x7B, 0x1F, 0xA2),
+        (0x7C, 0x3A, 0xED), (0x8B, 0x5C, 0xF6),                       # custom violets
     ],
 }
 
@@ -103,6 +109,7 @@ def hex_to_category(hex_color):
         '70AD47', '548235', '375623', 'A9D18E', 'E2EFDA',             # Office theme greens
         '00B04F', '009900', '33CC00', '00CC00', '66FF00',             # other greens
         'D9EAD3', 'B6D7A8', '93C47D',                                 # Google Docs greens
+        '1F7A1F', '15803D', '166534',                                 # paleta personalizada (verde oscuro)
     ]: return "VERB"
     # ---- NOUN: Sustantivo (azul) ----
     if hex_color in [
@@ -111,6 +118,7 @@ def hex_to_category(hex_color):
         '0000FF', '003DFF', '0563C1', '17375E', '003399',             # other blues
         '00AEEF', '0096C8', '4BACC6',                                 # teal/sky blues
         'C9DAF8', '9FC5E8', 'D0E0E3', '6D9EEB', 'A4C2F4', '6FA8DC', '3C78D8', '4A86E8', # GD blues
+        '1A56DB', '2563EB', '1D4ED8',                                 # paleta personalizada (azul)
     ]: return "NOUN"
     # ---- ADJ: Adjetivo (amarillo/naranja) ----
     if hex_color in [
@@ -119,6 +127,7 @@ def hex_to_category(hex_color):
         'FFF100', 'FFE135', 'FFD700', 'F9A825', 'F57F17',  # other yellows
         'FF9900', 'FF8000', 'F7A239', 'E6A118',            # ambers/oranges
         'FCE5CD',                                           # Google Docs orange light
+        'B45309', 'D97706', 'EA580C', 'F59E0B',           # paleta personalizada (naranja/ámbar)
     ]: return "ADJ"
     # ---- ADV: Adverbio (rosa/magenta/fucsia) ----
     if hex_color in [
@@ -127,6 +136,7 @@ def hex_to_category(hex_color):
         'FF1493', 'FF69B4', 'FF66CC', 'F50057', 'E91E63',            # pinks/fuchsia
         'EA3560', 'FC0FC0', 'DC143C', 'FF4081', 'FF80AB',            # hot pinks
         'C0004B', 'EAD1DC', 'F4CCCC', 'FF66FF',                       # dark magenta + GD pinks
+        'BE185D', 'DB2777', 'EC4899', 'E11D48',                       # paleta personalizada (rosa)
     ]: return "ADV"
     # ---- DET: Determinante / Artículo / Pronombre (gris) ----
     if hex_color in [
@@ -134,6 +144,7 @@ def hex_to_category(hex_color):
         '595959', '262626', '404040', '666666', '808080',    # Office dark grays
         'AEAAAA', 'D6DCE4', 'BDBDBD', '9E9E9E', 'B0B0B0',  # light-medium grays
         'B7B7B7', '999999', 'CCCCCC', 'EFEFEF',             # custom grays
+        '6B7280', '4B5563', '374151', '9CA3AF',           # paleta personalizada (gris)
     ]: return "DET"
     # ---- ADP: Preposición (morado/violeta) ----
     if hex_color in [
@@ -142,6 +153,7 @@ def hex_to_category(hex_color):
         '5C2D91', '68217A', '6A1B9A', '4A148C', '9C27B0',  # deep purples
         'AB47BC', '8E24AA', '7B1FA2',                       # medium purples
         'B4A7D6', 'D9D2E9', '9966FF', '9900FF',             # custom/GD purples
+        '7C3AED', '8B5CF6', '6D28D9', '9333EA',           # paleta personalizada (violeta)
     ]: return "ADP"
     return None
 
